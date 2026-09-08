@@ -1,0 +1,113 @@
+/* RakshaSetu — Design System & Custom Utilities */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@600;700&family=Manrope:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+:root {
+  --color-critical: #DC3B33;
+  --color-warning: #D98C1F;
+  --color-normal: #1E9E63;
+  --color-info: #2F6FBF;
+  --color-ink: #12181F;
+  --color-sub: #6B7684;
+  --color-line: #EBEEF1;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-numeral: 'Manrope', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background-color: #FCFCFD;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-numeral {
+  font-family: var(--font-numeral);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+/* Transition Rule: 0.15s ease per spec */
+.interactive-transition {
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease, opacity 0.15s ease;
+}
+
+/* Active scale micro-animation */
+button:active, .btn-active:active {
+  transform: scale(0.97);
+}
+
+/* Magic AI Card styling */
+.magic-ai-dark {
+  background: linear-gradient(135deg, #171E29 0%, #1E2838 100%);
+  border: 1px solid rgba(47, 111, 191, 0.25);
+}
+.magic-ai-light {
+  background: linear-gradient(135deg, #F3F7FC 0%, #EFF4FB 100%);
+  border: 1px solid rgba(47, 111, 191, 0.2);
+}
+
+/* Leaflet custom map markers */
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  font-family: var(--font-body);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+/* Pulse animation for SOS / Live Status */
+@keyframes sos-pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 59, 51, 0.7); }
+  70% { transform: scale(1.03); box-shadow: 0 0 0 15px rgba(220, 59, 51, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 59, 51, 0); }
+}
+.sos-btn-pulse {
+  animation: sos-pulse 2s infinite;
+}
+
+@keyframes ping-slow {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+.animate-ping-slow {
+  animation: ping-slow 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Modal Backdrop Blur */
+.modal-backdrop {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+/* Sidebar Active Tab Indicator */
+.sidebar-tab-active {
+  background-color: #2F6FBF !important;
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+}
+
+.dark .sidebar-tab-active {
+  background-color: #2563EB !important;
+  color: #FFFFFF !important;
+}
+

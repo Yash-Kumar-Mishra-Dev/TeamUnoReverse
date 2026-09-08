@@ -1,0 +1,1 @@
+export { StitchAssetsPanel } from './AssetsPanel';

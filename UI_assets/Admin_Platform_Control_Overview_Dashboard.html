@@ -1,0 +1,592 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Manrope:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"error":"#ba1a1a","on-secondary-fixed-variant":"#3f465c","background":"#f8f9ff","on-error-container":"#93000a","error-container":"#ffdad6","tertiary-container":"#d52022","outline-variant":"#c3c6d7","inverse-on-surface":"#eaf1ff","surface-container-highest":"#d3e4fe","on-surface-variant":"#434655","primary-fixed":"#dbe1ff","on-secondary-container":"#5c647a","on-secondary":"#ffffff","secondary-fixed-dim":"#bec6e0","secondary":"#565e74","on-secondary-fixed":"#131b2e","surface-dim":"#cbdbf5","inverse-surface":"#213145","on-tertiary-container":"#ffecea","on-primary-container":"#eeefff","on-background":"#0b1c30","on-primary":"#ffffff","surface-container-lowest":"#ffffff","surface-variant":"#d3e4fe","primary":"#004ac6","surface":"#f8f9ff","on-tertiary-fixed-variant":"#93000b","inverse-primary":"#b4c5ff","tertiary-fixed":"#ffdad6","primary-fixed-dim":"#b4c5ff","surface-bright":"#f8f9ff","outline":"#737686","surface-tint":"#0053db","on-tertiary-fixed":"#410002","on-tertiary":"#ffffff","on-primary-fixed-variant":"#003ea8","surface-container-low":"#eff4ff","tertiary-fixed-dim":"#ffb4ab","tertiary":"#ae0010","on-primary-fixed":"#00174b","on-error":"#ffffff","on-surface":"#0b1c30","secondary-fixed":"#dae2fd","surface-container-high":"#dce9ff","surface-container":"#e5eeff","primary-container":"#2563eb","secondary-container":"#dae2fd"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-2xs":"0.125rem","space-xs":"0.25rem","gutter-normal":"1rem","space-base":"1rem","space-xl":"1.5rem","space-sm":"0.5rem","space-2xl":"2rem","gutter-wide":"1.5rem","space-3xl":"2.5rem","gutter-compact":"0.75rem","space-lg":"1.25rem","space-md":"0.75rem"},"fontFamily":{"headline-lg":["Manrope"],"body-lg":["Inter"],"headline-xl":["Manrope"],"data-tabular":["Inter"],"display-lg-mobile":["Manrope"],"body-md":["Inter"],"label-lg":["Inter"],"label-sm":["Inter"],"headline-md":["Manrope"],"body-sm":["Inter"],"display-lg":["Manrope"],"label-md":["Inter"]},"fontSize":{"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"data-tabular":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"display-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"800"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"headline-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.03em","fontWeight":"800"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="p-space-base bg-surface-container-low flex items-center gap-space-md"><div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[20px]">admin_panel_settings</span></div><div class="flex flex-col min-w-0"><span class="font-label-lg text-label-lg text-on-surface truncate">Vikramaditya S.</span><div class="inline-flex items-center gap-space-2xs mt-space-2xs"><span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Superuser / Root Access</span></div></div></div><nav class="flex flex-col p-space-sm gap-space-2xs mt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="dashboard-health" href="#"><span class="material-symbols-outlined text-[18px]">monitoring</span>Dashboard &amp; Health</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="user-directory-rbac" href="#"><span class="material-symbols-outlined text-[18px]">manage_accounts</span>User Directory &amp; RBAC</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="incident-management" href="#"><span class="material-symbols-outlined text-[18px]">warning</span>Incident Management</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="system-audit-logs" href="#"><span class="material-symbols-outlined text-[18px]">receipt_long</span>System Audit Logs</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="content-advisories" href="#"><span class="material-symbols-outlined text-[18px]">campaign</span>Content &amp; Advisories</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="platform-analytics" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span>Platform Analytics</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="notification-gateway" href="#"><span class="material-symbols-outlined text-[18px]">hub</span>Notification Gateway</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="external-integrations" href="#"><span class="material-symbols-outlined text-[18px]">extension</span>External Integrations</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="backup-disaster-recovery" href="#"><span class="material-symbols-outlined text-[18px]">settings_backup_restore</span>Backup &amp; Disaster Recovery</a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="system-settings" href="#"><span class="material-symbols-outlined text-[18px]">tune</span>System Settings</a></nav></div><div class="p-space-base bg-surface-container-low m-space-sm rounded-xl"><div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-space-sm">Cluster Telemetry</div><div class="space-y-space-xs font-data-tabular text-data-tabular"><div class="flex items-center justify-between"><span class="text-on-surface-variant">DB Cluster</span><span class="inline-flex items-center gap-space-2xs text-on-surface"><span class="w-2 h-2 rounded-full bg-primary"></span>Active (3/3)</span></div><div class="flex items-center justify-between"><span class="text-on-surface-variant">Redis Cache</span><span class="inline-flex items-center gap-space-2xs text-on-surface"><span class="w-2 h-2 rounded-full bg-primary"></span>0.4ms lat</span></div><div class="flex items-center justify-between"><span class="text-on-surface-variant">Kafka Broker</span><span class="inline-flex items-center gap-space-2xs text-on-surface"><span class="w-2 h-2 rounded-full bg-primary"></span>Sync (6/6)</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-base flex items-center justify-between"><div class="flex items-center gap-space-base"><img alt="Brand logo. - Primary color: #2563eb - Font: manrope - Mode: dark - Roundness: rounded-sm" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V6Hh5jDrtoauI6TRQM_XcoGdmo8s3RwTP482Ge6TFX_sSxzZGnglhzK7rtVYltSseNi9cJtTGtOeXq0CF94T_eJ-NcSvxki49bmOBAOilz6Pe9Gp3VAOl_FnRuwCr28snnEHYa9Aq7zAGZkqMaySHJHYlf9WBQ3Sy_VtosKNepJBV1ONqrP8BQ9RmvvmgAtCuvOcey1ZNrOFxT2SijKNNtYB-8sFRTJoh3XlEcOJC_mSab9NICde7kilk"><span class="font-headline-md text-headline-md text-on-surface">RakshaSetu</span><span class="px-space-sm py-space-2xs bg-surface-container-high text-on-secondary-fixed font-label-sm text-label-sm uppercase rounded-lg">Admin / Platform Control</span><div class="hidden xl:flex items-center gap-space-xs px-space-md py-space-2xs bg-surface-container-low rounded-full"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface">All Systems Operational (99.98%)</span></div></div><div class="flex items-center gap-space-base"><div class="flex items-center bg-surface-container-low px-space-xs py-space-2xs rounded-lg font-label-sm text-label-sm"><button class="px-space-xs py-space-2xs bg-surface-container-lowest text-on-surface rounded-lg font-bold">EN</button><span class="text-outline-variant px-space-2xs">|</span><button class="px-space-xs py-space-2xs text-on-surface-variant hover:text-on-surface">हिन्दी</button></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden md:flex flex-col"><span class="font-label-sm text-label-sm text-on-surface leading-tight">Vikramaditya Singh</span><span class="font-data-tabular text-[11px] text-on-surface-variant leading-tight">SecOps Admin</span></div></div><button class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high hover:text-error transition-colors" title="Logout"><span class="material-symbols-outlined text-[18px]">logout</span></button></div></header><div class="pt-16"><div class="w-full bg-surface-container-high px-space-base py-space-xs flex items-center justify-between"><div class="flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-primary shrink-0"></span><span class="font-bold text-on-surface">4. ADMIN PANEL</span><span class="">—</span><span class="">PLATFORM OVERSIGHT &amp; SECURITY • Centralized node orchestration, telemetry audit, RBAC directory &amp; gateway health</span></div><div class="flex items-center gap-space-md"><button onclick="window.print()" class="inline-flex items-center gap-space-2xs px-space-md py-0.5 bg-surface-container-lowest hover:bg-surface-container text-on-surface border border-outline-variant/40 rounded shadow-sm font-label-sm text-label-sm font-bold transition-colors"><span class="material-symbols-outlined text-[16px] text-primary">print</span>Print Report / SitRep</button><span class="font-data-tabular text-data-tabular text-on-surface-variant uppercase tracking-wider">SEC-LEVEL: L4 ROOT</span></div></div><main class="w-full px-space-base py-space-base bg-surface min-h-[calc(100vh-6.5rem)]"><div class="flex flex-col w-full gap-space-base">
+<!-- Operational Oversight Strip (Top Dual Cards) -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-space-base">
+<!-- Card 1: Citizen Panel & SOS Service Oversight -->
+<div class="bg-surface-container-lowest p-space-base rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">cell_tower</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-snug">Citizen Panel &amp; SOS Service Oversight</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Gateway Orchestrator • Zone Alpha</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-full bg-surface-container-low text-on-surface font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            Online • Fail-Open Ready
+          </span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm py-space-sm bg-surface-container-low rounded-lg px-space-md mb-space-base">
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Active Sessions</div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-data-tabular">184,210</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Gateway Latency</div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-data-tabular">42<span class="text-label-sm text-on-surface-variant font-normal">ms</span></div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Broadcast Channel</div>
+<div class="font-label-lg text-label-lg text-on-surface mt-space-2xs truncate">alerts.broadcast</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Channel Load</div>
+<div class="font-label-lg text-label-lg text-primary mt-space-2xs">Nominal (14%)</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Heartbeat broadcast verified across 28 Telco edges</span>
+<button class="px-space-md py-space-xs bg-surface-container text-on-surface hover:bg-surface-container-high rounded-lg font-label-md text-label-md transition-colors inline-flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[16px]">settings_ethernet</span>
+          Manage Gateways
+        </button>
+</div>
+</div>
+<!-- Card 2: Field Responder Fleet Oversight -->
+<div class="bg-surface-container-lowest p-space-base rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">shield_person</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-snug">Field Responder Fleet Oversight</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Tactical Mesh • LoRa Telemetry</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded-full bg-surface-container-low text-on-surface font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+            34 Squads Synced
+          </span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm py-space-sm bg-surface-container-low rounded-lg px-space-md mb-space-base">
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Field Responders</div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-data-tabular">184 <span class="text-label-sm text-on-surface-variant font-normal">Active</span></div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Dexie Offline Queue</div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-data-tabular">99.4<span class="text-label-sm text-on-surface-variant font-normal">%</span></div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">LoRa Node Relay</div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-data-tabular">18 <span class="text-label-sm text-on-surface-variant font-normal">Towers</span></div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">GPS Drift Variance</div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-data-tabular">±1.2<span class="text-label-sm text-on-surface-variant font-normal">m</span></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Last peer packet exchange received 8s ago</span>
+<button class="px-space-md py-space-xs bg-surface-container text-on-surface hover:bg-surface-container-high rounded-lg font-label-md text-label-md transition-colors inline-flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[16px]">hub</span>
+          Inspect Mesh
+        </button>
+</div>
+</div>
+</section>
+<!-- Primary 5-Stat KPI Row -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-base">
+<!-- Stat 1 -->
+<div class="bg-surface-container-lowest p-space-base rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Registered Citizens</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</div>
+</div>
+<div>
+<div class="font-display-lg text-display-lg text-on-surface font-data-tabular leading-tight">1,482,904</div>
+<div class="flex items-center gap-space-xs mt-space-2xs">
+<span class="font-label-sm text-label-sm text-primary font-bold inline-flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> +14.2k
+          </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">this week</span>
+</div>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="bg-surface-container-lowest p-space-base rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Live Incidents</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">emergency</span>
+</div>
+</div>
+<div>
+<div class="font-display-lg text-display-lg text-on-surface font-data-tabular leading-tight">38</div>
+<div class="flex items-center gap-space-xs mt-space-2xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-semibold text-on-surface">12</span> Verified • <span class="font-semibold text-on-surface">26</span> Reviewing
+        </div>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="bg-surface-container-lowest p-space-base rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Agency Org Units</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">domain</span>
+</div>
+</div>
+<div>
+<div class="font-display-lg text-display-lg text-on-surface font-data-tabular leading-tight">14</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate mt-space-2xs">NDRF, SDRF, CWC, Police, PWD</div>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="bg-surface-container-lowest p-space-base rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active Deployments</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+</div>
+</div>
+<div>
+<div class="font-display-lg text-display-lg text-on-surface font-data-tabular leading-tight">48</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">Tactical Squads Deployed</div>
+</div>
+</div>
+<!-- Stat 5 -->
+<div class="bg-surface-container-lowest p-space-base rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Service SLA</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+</div>
+<div>
+<div class="font-display-lg text-display-lg text-on-surface font-data-tabular leading-tight">99.98%</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">Last failover: 42d ago</div>
+</div>
+</div>
+</section>
+<!-- Shared Magic AI Suggestion Card -->
+<section class="bg-gradient-to-r from-surface-container-low via-surface-container-high to-surface-container-low p-space-base rounded-xl shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-base">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">auto_awesome</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">Magic AI suggests</span>
+<span class="px-space-xs py-space-2xs bg-primary/10 text-primary rounded font-label-sm text-label-sm uppercase tracking-wide">Predictive Triage</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface max-w-4xl">
+            Citizen reports in <span class="font-semibold text-on-surface">Guwahati Kamrup Metro</span> have spiked <span class="font-bold text-tertiary">3.4x</span> above baseline in the last hour — likely an unflagged localized flash flood cluster. Recommend notifying <span class="font-semibold text-on-surface">SDRF Zone 2 Dispatcher</span>.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 self-end md:self-center">
+<button class="px-space-md py-space-xs bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md rounded-lg transition-colors" id="dismissAiBtn">
+          Dismiss
+        </button>
+<button class="px-space-lg py-space-xs bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md rounded-lg transition-colors inline-flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-[16px]">notifications_active</span>
+          Review Anomaly
+        </button>
+</div>
+</div>
+</section>
+<!-- Main 2-Column Content Grid -->
+<section class="bg-surface-container-lowest p-space-base rounded-xl shadow-sm"><div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-md border-b border-outline-variant/30 mb-space-base"><div><div class="flex items-center gap-space-xs"><h3 class="font-headline-lg text-headline-lg text-on-surface">Platform Analytics &amp; Distribution</h3><span class="px-space-xs py-0.5 bg-primary/10 text-primary font-label-sm text-label-sm uppercase rounded font-bold">Live Telemetry</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">Incident severity matrix, citizen distress triage breakdown, and deployed agency multi-force allocation</p></div><div class="flex items-center gap-space-xs self-start md:self-center"><div class="flex items-center bg-surface-container-low p-1 rounded-lg font-label-sm text-label-sm"><button class="px-space-sm py-1 bg-surface-container-lowest text-primary font-bold rounded shadow-sm">Today</button><button class="px-space-sm py-1 text-on-surface-variant hover:text-on-surface">24 Hours</button><button class="px-space-sm py-1 text-on-surface-variant hover:text-on-surface">7 Days</button></div><button onclick="window.print()" class="px-space-sm py-1.5 bg-surface-container-low hover:bg-surface-container text-on-surface rounded-lg font-label-sm text-label-sm inline-flex items-center gap-space-2xs transition-colors"><span class="material-symbols-outlined text-[15px] text-primary">print</span>Print Chart Data</button></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-space-base"><div class="bg-surface-container-low p-space-base rounded-xl flex flex-col justify-between"><div class="flex items-center justify-between mb-space-sm"><div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Pie Chart 01</span><h4 class="font-headline-md text-headline-md text-on-surface">Incident by Severity</h4></div><span class="font-data-tabular text-label-sm text-on-surface font-bold bg-surface-container-highest px-space-xs py-0.5 rounded">38 Active</span></div><div class="flex items-center justify-center py-space-sm"><div class="relative w-36 h-36 flex items-center justify-center"><svg class="w-full h-full -rotate-90" viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#dce9ff" stroke-width="4"></circle><circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#ba1a1a" stroke-width="4" stroke-dasharray="24 76" stroke-dashoffset="0"></circle><circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#ae0010" stroke-width="4" stroke-dasharray="34 66" stroke-dashoffset="-24"></circle><circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#004ac6" stroke-width="4" stroke-dasharray="28 72" stroke-dashoffset="-58"></circle><circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#565e74" stroke-width="4" stroke-dasharray="14 86" stroke-dashoffset="-86"></circle></svg><div class="absolute flex flex-col items-center justify-center"><span class="font-display-lg text-[20px] font-bold text-on-surface leading-none font-data-tabular">38</span><span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider mt-0.5">Incidents</span></div></div></div><div class="space-y-space-2xs pt-space-xs border-t border-outline-variant/20 font-data-tabular text-data-tabular"><div class="flex items-center justify-between"><span class="flex items-center gap-space-2xs text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-error shrink-0"></span>Critical (P1)</span><div class="flex items-center gap-space-sm"><span class="font-bold text-on-surface">9</span><span class="font-label-sm text-[11px] px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-bold">24%</span></div></div><div class="flex items-center justify-between"><span class="flex items-center gap-space-2xs text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-tertiary shrink-0"></span>High (P2)</span><div class="flex items-center gap-space-sm"><span class="font-bold text-on-surface">13</span><span class="font-label-sm text-[11px] px-1.5 py-0.5 rounded bg-surface-container-highest text-tertiary font-bold">34%</span></div></div><div class="flex items-center justify-between"><span class="flex items-center gap-space-2xs text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span>Moderate (P3)</span><div class="flex items-center gap-space-sm"><span class="font-bold text-on-surface">11</span><span class="font-label-sm text-[11px] px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-bold">28%</span></div></div><div class="flex items-center justify-between"><span class="flex items-center gap-space-2xs text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-secondary shrink-0"></span>Low (P4)</span><div class="flex items-center gap-space-sm"><span class="font-bold text-on-surface">5</span><span class="font-label-sm text-[11px] px-1.5 py-0.5 rounded bg-surface-container-highest text-secondary font-bold">14%</span></div></div></div></div><div class="bg-surface-container-low p-space-base rounded-xl flex flex-col justify-between"><div class="flex items-center justify-between mb-space-sm"><div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Pie Chart 02</span><h4 class="font-headline-md text-headline-md text-on-surface">Citizen Distress by Category</h4></div><span class="font-data-tabular text-label-sm text-primary font-bold bg-primary/10 px-space-xs py-0.5 rounded">1,842 Today</span></div><div class="flex items-center justify-center py-space-sm"><div class="relative w-36 h-36 flex items-center justify-center"><svg class="w-full h-full -rotate-90" viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#dce9ff" stroke-width="4"></circle><circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#004ac6" stroke-width="4" stroke-dasharray="46 54" stroke-dashoffset="0"></circle><circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#ba1a1a" stroke-width="4" stroke-dasharray="28 72" stroke-dashoffset="-46"></circle><circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#2563eb" stroke-width="4" stroke-dasharray="16 84" stroke-dashoffset="-74"></circle><circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#565e74" stroke-width="4" stroke-dasharray="10 90" stroke-dashoffset="-90"></circle></svg><div class="absolute flex flex-col items-center justify-center"><span class="font-display-lg text-[20px] font-bold text-on-surface leading-none font-data-tabular">4</span><span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider mt-0.5">Categories</span></div></div></div><div class="space-y-space-2xs pt-space-xs border-t border-outline-variant/20 font-data-tabular text-data-tabular"><div class="flex items-center justify-between"><span class="flex items-center gap-space-2xs text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span>Flood Inundation</span><div class="flex items-center gap-space-sm"><span class="font-bold text-on-surface">847</span><span class="font-label-sm text-[11px] px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-bold">46%</span></div></div><div class="flex items-center justify-between"><span class="flex items-center gap-space-2xs text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-error shrink-0"></span>Medical / Rescue</span><div class="flex items-center gap-space-sm"><span class="font-bold text-on-surface">516</span><span class="font-label-sm text-[11px] px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-bold">28%</span></div></div><div class="flex items-center justify-between"><span class="flex items-center gap-space-2xs text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-primary-container shrink-0"></span>Supply &amp; Food Relief</span><div class="flex items-center gap-space-sm"><span class="font-bold text-on-surface">295</span><span class="font-label-sm text-[11px] px-1.5 py-0.5 rounded bg-surface-container-highest text-primary font-bold">16%</span></div></div><div class="flex items-center justify-between"><span class="flex items-center gap-space-2xs text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-secondary shrink-0"></span>Road Blockage / Landslide</span><div class="flex items-center gap-space-sm"><span class="font-bold text-on-surface">184</span><span class="font-label-sm text-[11px] px-1.5 py-0.5 rounded bg-surface-container-highest text-secondary font-bold">10%</span></div></div></div></div><div class="bg-surface-container-low p-space-base rounded-xl flex flex-col justify-between"><div class="flex items-center justify-between mb-space-sm"><div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Pie Chart 03</span><h4 class="font-headline-md text-headline-md text-on-surface">Agency Resource Allocation</h4></div><span class="font-data-tabular text-label-sm text-on-surface font-bold bg-surface-container-highest px-space-xs py-0.5 rounded">48 Squads</span></div><div class="flex items-center justify-center py-space-sm"><div class="relative w-36 h-36 flex items-center justify-center"><svg class="w-full h-full -rotate-90" viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#dce9ff" stroke-width="4"></circle><circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#004ac6" stroke-width="4" stroke-dasharray="42 58" stroke-dashoffset="0"></circle><circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#2563eb" stroke-width="4" stroke-dasharray="30 70" stroke-dashoffset="-42"></circle><circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#565e74" stroke-width="4" stroke-dasharray="18 82" stroke-dashoffset="-72"></circle><circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#ae0010" stroke-width="4" stroke-dasharray="10 90" stroke-dashoffset="-90"></circle></svg><div class="absolute flex flex-col items-center justify-center"><span class="font-display-lg text-[20px] font-bold text-on-surface leading-none font-data-tabular">48</span><span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider mt-0.5">Squads</span></div></div></div><div class="space-y-space-2xs pt-space-xs border-t border-outline-variant/20 font-data-tabular text-data-tabular"><div class="flex items-center justify-between"><span class="flex items-center gap-space-2xs text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span>NDRF (National Force)</span><div class="flex items-center gap-space-sm"><span class="font-bold text-on-surface">20</span><span class="font-label-sm text-[11px] px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-bold">42%</span></div></div><div class="flex items-center justify-between"><span class="flex items-center gap-space-2xs text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-primary-container shrink-0"></span>SDRF (State Response)</span><div class="flex items-center gap-space-sm"><span class="font-bold text-on-surface">14</span><span class="font-label-sm text-[11px] px-1.5 py-0.5 rounded bg-surface-container-highest text-primary font-bold">30%</span></div></div><div class="flex items-center justify-between"><span class="flex items-center gap-space-2xs text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-secondary shrink-0"></span>Civil Defense &amp; Homeguard</span><div class="flex items-center gap-space-sm"><span class="font-bold text-on-surface">9</span><span class="font-label-sm text-[11px] px-1.5 py-0.5 rounded bg-surface-container-highest text-secondary font-bold">18%</span></div></div><div class="flex items-center justify-between"><span class="flex items-center gap-space-2xs text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-tertiary shrink-0"></span>Army &amp; Air Force Logistics</span><div class="flex items-center gap-space-sm"><span class="font-bold text-on-surface">5</span><span class="font-label-sm text-[11px] px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-bold">10%</span></div></div></div></div></div></section><div class="grid grid-cols-1 xl:grid-cols-12 gap-space-base">
+<!-- Column A: Left - Platform Throughput & Microservices Health (7 cols) -->
+<div class="xl:col-span-7 flex flex-col gap-space-base">
+<!-- Real-time Gateway Throughput & Metrics -->
+<div class="bg-surface-container-lowest p-space-base rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-base">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Platform Throughput &amp; Ingestion</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live streaming edge telemetry across synchronous and event pipelines</p>
+</div>
+<span class="font-data-tabular text-data-tabular text-on-surface-variant bg-surface-container-low px-space-sm py-space-2xs rounded-lg">
+            REFRESH: 1s
+          </span>
+</div>
+<!-- Metric Stream Bars -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mb-space-base">
+<!-- Item 1 -->
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-space-xs">
+<span class="">REST /api/v1 Ingress</span>
+<span class="text-primary font-bold">NORMAL</span>
+</div>
+<div class="font-headline-xl text-headline-xl text-on-surface font-data-tabular">3,420 <span class="text-label-sm font-normal text-on-surface-variant">req/s</span></div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-space-sm overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 68%;"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant mt-space-2xs">
+<span class="">p95 Latency: 18ms</span>
+<span class="">Headroom: 32%</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-space-xs">
+<span class="">Socket.IO Sessions</span>
+<span class="text-primary font-bold">SYNCED</span>
+</div>
+<div class="font-headline-xl text-headline-xl text-on-surface font-data-tabular">14.8k <span class="text-label-sm font-normal text-on-surface-variant">conns</span></div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-space-sm overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 52%;"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant mt-space-2xs">
+<span class="">Ack rate: 99.98%</span>
+<span class="">Pool: A/B Active</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm mb-space-xs">
+<span class="">Kafka Ingestion</span>
+<span class="text-primary font-bold">OPTIMAL</span>
+</div>
+<div class="font-headline-xl text-headline-xl text-on-surface font-data-tabular">8.2k <span class="text-label-sm font-normal text-on-surface-variant">evt/s</span></div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-space-sm overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 74%;"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant mt-space-2xs">
+<span class="">0 Lag / 6 Partitions</span>
+<span class="">4.1 MB/s throughput</span>
+</div>
+</div>
+</div>
+<!-- Telemetry Graph Preview (Inline SVG) -->
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Cluster Ingress History (Past 60 Minutes)</span>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm">
+<span class="inline-flex items-center gap-space-2xs text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary"></span> REST Gateway
+              </span>
+<span class="inline-flex items-center gap-space-2xs text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Event Bus Ingest
+              </span>
+</div>
+</div>
+<div class="h-32 w-full flex items-end">
+<svg class="w-full h-full overflow-visible" preserveAspectRatio="none" viewBox="0 0 700 120">
+<!-- Grid horizontal lines -->
+<line class="text-surface-container-high" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="700" y1="30" y2="30"></line>
+<line class="text-surface-container-high" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="700" y1="70" y2="70"></line>
+<line class="text-surface-container-high" stroke="currentColor" x1="0" x2="700" y1="110" y2="110"></line>
+<!-- Kafka line -->
+<path class="text-secondary opacity-60" d="M0,85 Q70,75 140,80 T280,65 T420,70 T560,50 T700,58" fill="none" stroke="currentColor" stroke-width="2"></path>
+<!-- REST line -->
+<path class="text-primary" d="M0,90 Q70,70 140,60 T280,45 T420,38 T560,30 T700,24" fill="none" stroke="currentColor" stroke-width="2.5"></path>
+<!-- Gradient fill under REST line -->
+<defs>
+<linearGradient id="restGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#004ac6" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#004ac6" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+<path d="M0,90 Q70,70 140,60 T280,45 T420,38 T560,30 T700,24 L700,110 L0,110 Z" fill="url(#restGradient)"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Recent Platform Audit Events -->
+<div class="bg-surface-container-lowest p-space-base rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-base">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Recent Platform Audit Events</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Immutable administrative action trail and system lifecycle logs</p>
+</div>
+<div class="flex items-center gap-space-sm"><button onclick="window.print()" class="font-label-md text-label-md text-on-surface hover:text-primary inline-flex items-center gap-space-2xs px-space-sm py-1 rounded bg-surface-container-low hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[16px] text-primary">print</span>Print SitRep</button><button class="font-label-md text-label-md text-primary hover:underline inline-flex items-center gap-space-2xs"><span class="material-symbols-outlined text-[16px]">download</span>Export SEC Log</button></div>
+</div>
+<div class="space-y-space-xs">
+<!-- Audit Row 1 -->
+<div class="p-space-md bg-surface-container-low rounded-lg flex items-start justify-between gap-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-start gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></span>
+<div>
+<p class="font-body-md text-body-md text-on-surface">
+<span class="font-semibold">Admin vikram.s</span> escalated incident <span class="font-data-tabular font-bold text-primary">#INC-9042</span> to Apex Command
+                </p>
+<span class="font-data-tabular text-data-tabular text-on-surface-variant">Cluster: Dis-East-1 • IP: 10.42.0.18</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container-highest text-on-surface">Normal</span>
+<span class="font-data-tabular text-[11px] text-on-surface-variant mt-space-2xs">2m ago</span>
+</div>
+</div>
+<!-- Audit Row 2 -->
+<div class="p-space-md bg-surface-container-low rounded-lg flex items-start justify-between gap-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-start gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-secondary mt-2 shrink-0"></span>
+<div>
+<p class="font-body-md text-body-md text-on-surface">
+<span class="font-semibold">Keycloak JWT</span> rotation executed successfully across 4 regional clusters
+                </p>
+<span class="font-data-tabular text-data-tabular text-on-surface-variant">Key ID: kid_2026_q3_994 • Alg: RS256</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container-highest text-on-surface">Info</span>
+<span class="font-data-tabular text-[11px] text-on-surface-variant mt-space-2xs">14m ago</span>
+</div>
+</div>
+<!-- Audit Row 3 -->
+<div class="p-space-md bg-surface-container-low rounded-lg flex items-start justify-between gap-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-start gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></span>
+<div>
+<p class="font-body-md text-body-md text-on-surface">
+<span class="font-semibold">NDRF Battalion 04</span> updated roster status: 12 members on-duty
+                </p>
+<span class="font-data-tabular text-data-tabular text-on-surface-variant">Station ID: NDRF-AS-04 • Device: Android Handheld E-7</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container-highest text-on-surface">Normal</span>
+<span class="font-data-tabular text-[11px] text-on-surface-variant mt-space-2xs">28m ago</span>
+</div>
+</div>
+<!-- Audit Row 4 -->
+<div class="p-space-md bg-surface-container-low rounded-lg flex items-start justify-between gap-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-start gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary mt-2 shrink-0"></span>
+<div>
+<p class="font-body-md text-body-md text-on-surface">
+                  Rate-limiting engaged on public endpoint <code class="bg-surface-container px-1 py-0.5 rounded font-data-tabular">/citizen/reports</code> (Guwahati Zone)
+                </p>
+<span class="font-data-tabular text-data-tabular text-tertiary">Traffic exceeded 1,200 req/s threshold from ASN 55836</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-bold">Warning</span>
+<span class="font-data-tabular text-[11px] text-on-surface-variant mt-space-2xs">45m ago</span>
+</div>
+</div>
+<!-- Audit Row 5 -->
+<div class="p-space-md bg-surface-container-low rounded-lg flex items-start justify-between gap-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-start gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-primary mt-2 shrink-0"></span>
+<div>
+<p class="font-body-md text-body-md text-on-surface">
+                  Automated database cold snapshot <span class="font-data-tabular font-bold">snapshot_2026_09_07_0200.bak</span> completed
+                </p>
+<span class="font-data-tabular text-data-tabular text-on-surface-variant">Encrypted • Size: 34.2 GB • Target: S3-Gov-Vault</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container-highest text-primary font-bold">Success</span>
+<span class="font-data-tabular text-[11px] text-on-surface-variant mt-space-2xs">1h ago</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Column B: Right - System Infrastructure Health & Services Status (5 cols) -->
+<div class="xl:col-span-5 flex flex-col gap-space-base">
+<!-- Infrastructure Health List -->
+<div class="bg-surface-container-lowest p-space-base rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-base">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">System Health</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Core subsystem availability &amp; sync queues</p>
+</div>
+<span class="inline-flex items-center gap-space-2xs text-label-sm font-label-sm px-space-sm py-space-2xs bg-surface-container-high rounded-full text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary"></span> 7/7 Nominal
+          </span>
+</div>
+<div class="space-y-space-xs">
+<!-- Service 1 -->
+<div class="flex items-center justify-between p-space-md bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">Auth &amp; Keycloak OIDC</div>
+<div class="font-data-tabular text-data-tabular text-on-surface-variant">Cluster East • OAuth2 / SSO</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm font-bold text-primary block">Operational</span>
+<span class="font-data-tabular text-[11px] text-on-surface-variant">12ms</span>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="flex items-center justify-between p-space-md bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">Socket.IO Gateway (Pool A &amp; B)</div>
+<div class="font-data-tabular text-data-tabular text-on-surface-variant">Realtime bi-directional telemetry</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm font-bold text-primary block">Operational</span>
+<span class="font-data-tabular text-[11px] text-on-surface-variant">34ms</span>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="flex items-center justify-between p-space-md bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">PostGIS / PostgreSQL Primary</div>
+<div class="font-data-tabular text-data-tabular text-on-surface-variant">Spatial Indexing &amp; Master State</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm font-bold text-primary block">Operational</span>
+<span class="font-data-tabular text-[11px] text-on-surface-variant">Healthy, 48% Pool</span>
+</div>
+</div>
+<!-- Service 4 -->
+<div class="flex items-center justify-between p-space-md bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">Redis Distributed Cache</div>
+<div class="font-data-tabular text-data-tabular text-on-surface-variant">Hot sessions &amp; geo spatial pub/sub</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm font-bold text-primary block">Operational</span>
+<span class="font-data-tabular text-[11px] text-on-surface-variant">1.2GB / 8GB</span>
+</div>
+</div>
+<!-- Service 5 -->
+<div class="flex items-center justify-between p-space-md bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">Kafka Event Bus (Disaster Streams)</div>
+<div class="font-data-tabular text-data-tabular text-on-surface-variant">Persistent audit &amp; replay queue</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm font-bold text-primary block">Operational</span>
+<span class="font-data-tabular text-[11px] text-on-surface-variant">0 Lag</span>
+</div>
+</div>
+<!-- Service 6 -->
+<div class="flex items-center justify-between p-space-md bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">Dexie Offline Sync Relay</div>
+<div class="font-data-tabular text-data-tabular text-on-surface-variant">Field client sync engine reconciliation</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm font-bold text-primary block">Operational</span>
+<span class="font-data-tabular text-[11px] text-on-surface-variant">100% Flush Rate</span>
+</div>
+</div>
+<!-- Service 7 -->
+<div class="flex items-center justify-between p-space-md bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">SMS Gateway (Fail-Open Telecoms)</div>
+<div class="font-data-tabular text-data-tabular text-on-surface-variant">Emergency broadcast SMSC &amp; CDAC</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm font-bold text-primary block">Operational</span>
+<span class="font-data-tabular text-[11px] text-on-surface-variant">CDAC 99.9%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Administrative Tools -->
+<div class="bg-surface-container-lowest p-space-base rounded-xl shadow-sm">
+<div class="mb-space-md">
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Platform Control Utilities</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Superuser manual overrides &amp; maintenance tasks</p>
+</div>
+<div class="flex flex-col gap-space-sm">
+<button class="w-full py-space-sm px-space-md bg-surface-container-low hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md transition-colors flex items-center justify-between group" id="btnSnapshot">
+<span class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">save</span>
+              Run Database Snapshot
+            </span>
+<span class="font-data-tabular text-data-tabular text-on-surface-variant group-hover:text-on-surface">Cold Backup</span>
+</button>
+<button class="w-full py-space-sm px-space-md bg-surface-container-low hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md transition-colors flex items-center justify-between group" id="btnPurge">
+<span class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">cleaning_services</span>
+              Purge CDN &amp; Cache
+            </span>
+<span class="font-data-tabular text-data-tabular text-on-surface-variant group-hover:text-on-surface">Edge Flush</span>
+</button>
+<button class="w-full py-space-sm px-space-md bg-surface-container-low hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md transition-colors flex items-center justify-between group" id="btnPing">
+<span class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary">emergency_share</span>
+              Test 112 Fail-Open Ping
+            </span>
+<span class="font-data-tabular text-data-tabular text-on-surface-variant group-hover:text-on-surface">Telco Mock</span>
+</button>
+</div>
+<div class="hidden mt-space-sm p-space-sm rounded bg-surface-container-high font-data-tabular text-data-tabular text-on-surface flex items-center gap-space-xs" id="actionFeedback">
+<span class="material-symbols-outlined text-[16px] text-primary">info</span>
+<span id="feedbackText" class="">Action initiated...</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const dismissBtn = document.getElementById('dismissAiBtn');
+    if (dismissBtn) {
+      dismissBtn.addEventListener('click', function() {
+        const aiSection = dismissBtn.closest('section');
+        if (aiSection) {
+          aiSection.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+          aiSection.style.opacity = '0';
+          aiSection.style.transform = 'translateY(-8px)';
+          setTimeout(() => aiSection.remove(), 250);
+        }
+      });
+    }
+
+    const feedback = document.getElementById('actionFeedback');
+    const feedbackText = document.getElementById('feedbackText');
+
+    function triggerAction(msg) {
+      if (!feedback || !feedbackText) return;
+      feedback.classList.remove('hidden');
+      feedbackText.textContent = msg;
+      setTimeout(() => {
+        feedback.classList.add('hidden');
+      }, 3500);
+    }
+
+    const btnSnapshot = document.getElementById('btnSnapshot');
+    if (btnSnapshot) {
+      btnSnapshot.addEventListener('click', () => {
+        triggerAction('Database snapshot job dispatched: backup_adhoc_' + Date.now() + '.bak');
+      });
+    }
+
+    const btnPurge = document.getElementById('btnPurge');
+    if (btnPurge) {
+      btnPurge.addEventListener('click', () => {
+        triggerAction('CDN edge cache flush queued across 28 Telco POPs.');
+      });
+    }
+
+    const btnPing = document.getElementById('btnPing');
+    if (btnPing) {
+      btnPing.addEventListener('click', () => {
+        triggerAction('112 Emergency Trunk heartbeat ACK received (latency 19ms).');
+      });
+    }
+  })();
+</script></main></div></div>
+
+</body></html>

@@ -1,0 +1,502 @@
+<!DOCTYPE html><html lang="en" style=""><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>RakshaSetu Citizen App - Citizen Panel</title>
+<!-- Tailwind CSS CDN with Forms and Container Queries plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0a0d14',
+              sidebar: '#0b0f19',
+              activeGreen: '#00cc83',
+              subbar: '#044c33',
+              alertRed: '#dc2626',
+              borderDark: '#1f293d',
+              bgLight: '#f1f5f9'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style data-purpose="custom-layout">
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0b0f19;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #243048;
+      border-radius: 4px;
+    }
+  </style>
+<style data-purpose="map-styling">
+    .map-pattern {
+      background-color: #f8fafc;
+      background-image: 
+        radial-gradient(#e2e8f0 1.2px, transparent 1.2px), 
+        linear-gradient(to right, rgba(226, 232, 240, 0.4) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(226, 232, 240, 0.4) 1px, transparent 1px);
+      background-size: 24px 24px, 48px 48px, 48px 48px;
+    }
+  </style>
+</head>
+<body class="bg-brand-bgLight text-slate-800 min-h-screen flex flex-col antialiased">
+<!-- BEGIN: MainHeader -->
+<header class="bg-brand-dark text-white px-4 py-2.5 flex items-center justify-between border-b border-slate-800 select-none z-30" data-purpose="top-navigation-bar">
+<!-- Left: Hamburger & Logo with App Tag -->
+<div class="flex items-center space-x-3.5">
+<button aria-label="Toggle navigation" class="p-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- App Logo Emblem and Name -->
+<div class="flex items-center space-x-2.5">
+<div class="w-8 h-8 rounded-full bg-white flex items-center justify-center p-0.5 shadow-sm border border-slate-300">
+<div class="w-full h-full rounded-full border border-sky-500 flex flex-col items-center justify-center bg-slate-50">
+<svg class="w-4 h-4 text-sky-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<div>
+<div class="flex items-center space-x-2">
+<span class="text-base font-bold tracking-tight text-white">Raksha Setu</span>
+<span class="bg-[#1e40af] text-[10px] font-bold text-sky-200 px-1.5 py-0.5 rounded tracking-wide border border-blue-400/30">CITIZEN APP</span>
+</div>
+<p class="text-[10px] text-slate-400 font-normal leading-none -mt-0.5">Prepare. Respond. Protect. Together.</p>
+</div>
+</div>
+</div>
+<!-- Right Controls: Language switchers, Theme toggler, Back & Logout buttons -->
+<div class="flex items-center space-x-2.5 text-xs">
+<!-- Language Buttons -->
+<div class="flex items-center bg-[#111827] rounded-md border border-slate-700 p-0.5">
+<button class="bg-blue-600 text-white font-semibold px-2 py-1 rounded text-[11px] leading-none">EN</button>
+<button class="text-slate-400 hover:text-white font-medium px-2 py-1 rounded text-[11px] leading-none transition">हिन्दी</button>
+</div>
+<!-- Dark/Light Theme Button -->
+<button aria-label="Theme mode" class="p-1.5 text-slate-400 hover:text-white rounded border border-slate-700 bg-[#111827]">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Back Button -->
+<button class="flex items-center space-x-1 border border-slate-700 bg-[#111827] text-slate-200 hover:text-white px-2.5 py-1 rounded font-medium text-[11px] transition">
+<span class="">‹</span>
+<span class="">Back</span>
+</button>
+<!-- Logout Button -->
+<button class="flex items-center space-x-1 border border-red-900/60 bg-[#1c1117] text-red-400 hover:bg-red-900/40 px-2.5 py-1 rounded font-medium text-[11px] transition">
+<svg class="w-3 h-3 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="">Logout</span>
+</button>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: SubHeaderBanner -->
+<section class="bg-[#035133] text-white px-4 py-1.5 flex items-center justify-between text-xs border-b border-emerald-900 shadow-inner" data-purpose="informational-banner">
+<div class="flex items-center space-x-1.5 overflow-hidden text-ellipsis whitespace-nowrap">
+<span class="font-bold tracking-tight">2. CITIZEN PANEL – STAY INFORMED, STAY SAFE</span>
+<span class="text-emerald-300/80">•</span>
+<span class="text-emerald-100 font-normal truncate">Empowering citizens with real-time alerts, reporting &amp; safety information</span>
+</div>
+<div class="flex items-center space-x-1.5 text-[11px] text-emerald-200 shrink-0">
+<span class="font-medium text-white">Verified Citizen GPS Link</span>
+<span class="text-emerald-300">•</span>
+<span class="font-semibold text-emerald-100">Guwahati, Assam</span>
+</div>
+</section>
+<!-- END: SubHeaderBanner -->
+<!-- BEGIN: MainDashboardLayout -->
+<div class="flex-1 flex flex-row overflow-hidden">
+<!-- BEGIN: LeftSidebar -->
+<aside class="w-60 bg-brand-sidebar text-slate-300 flex flex-col justify-between shrink-0 select-none border-r border-slate-800/80" data-purpose="citizen-sidebar">
+<!-- Top Section of Sidebar: User ID & Nav Links -->
+<div class="p-3 space-y-4 overflow-y-auto">
+<!-- User Profile Pill Card -->
+<div class="bg-[#111622] rounded-xl p-2.5 flex items-center space-x-3 border border-slate-800 shadow-sm" data-purpose="user-badge">
+<div class="w-10 h-10 rounded-full bg-[#99f6e4] text-[#0f766e] flex items-center justify-center font-bold text-sm shrink-0">
+            RK
+          </div>
+<div class="overflow-hidden leading-tight">
+<h4 class="text-xs font-bold text-white truncate">Rohit Kalita</h4>
+<p class="text-[10px] text-slate-400">ID: <span class="text-slate-300">#CZ-4820</span></p>
+<div class="flex items-center space-x-1 mt-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block animate-pulse"></span>
+<span class="text-[9px] text-emerald-400 font-medium">Geotag Verified</span>
+</div>
+</div>
+</div>
+<!-- Navigation Menu Items -->
+<nav aria-label="Sidebar Navigation" class="space-y-1">
+<!-- Active Item: Dashboard -->
+<a class="flex items-center space-x-3 bg-brand-activeGreen text-slate-950 font-bold px-3 py-2 rounded-lg text-xs shadow-md transition" href="#">
+<svg class="w-4 h-4 text-slate-950 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="">Dashboard</span>
+</a>
+<!-- Emergency Alerts with Badge -->
+<a class="flex items-center justify-between text-slate-400 hover:text-white hover:bg-slate-800/60 px-3 py-2 rounded-lg text-xs font-medium transition" href="#">
+<div class="flex items-center space-x-3 truncate">
+<svg class="w-4 h-4 text-red-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="truncate">Emergency Alerts</span>
+</div>
+<span class="bg-rose-600 text-white text-[9px] font-bold px-1.5 py-0.5 rounded shadow-sm">1 High</span>
+</a>
+<!-- Report Incident (Camera) -->
+<a class="flex items-center space-x-3 text-slate-400 hover:text-white hover:bg-slate-800/60 px-3 py-2 rounded-lg text-xs font-medium transition" href="#">
+<svg class="w-4 h-4 text-amber-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="truncate">Report Incident (Camera)</span>
+</a>
+<!-- Relief Shelters -->
+<a class="flex items-center space-x-3 text-slate-400 hover:text-white hover:bg-slate-800/60 px-3 py-2 rounded-lg text-xs font-medium transition" href="#">
+<svg class="w-4 h-4 text-sky-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="truncate">Relief Shelters</span>
+</a>
+<!-- All Incidents -->
+<a class="flex items-center space-x-3 text-slate-400 hover:text-white hover:bg-slate-800/60 px-3 py-2 rounded-lg text-xs font-medium transition" href="#">
+<svg class="w-4 h-4 text-purple-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="truncate">All Incidents</span>
+</a>
+<!-- Relief Resources -->
+<a class="flex items-center space-x-3 text-slate-400 hover:text-white hover:bg-slate-800/60 px-3 py-2 rounded-lg text-xs font-medium transition" href="#">
+<svg class="w-4 h-4 text-teal-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="truncate">Relief Resources</span>
+</a>
+<!-- Safety Info & Guides -->
+<a class="flex items-center space-x-3 text-slate-400 hover:text-white hover:bg-slate-800/60 px-3 py-2 rounded-lg text-xs font-medium transition" href="#">
+<svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="truncate">Safety Info &amp; Guides</span>
+</a>
+<!-- Emergency 112 Contacts -->
+<a class="flex items-center space-x-3 text-slate-400 hover:text-white hover:bg-slate-800/60 px-3 py-2 rounded-lg text-xs font-medium transition" href="#">
+<svg class="w-4 h-4 text-sky-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="truncate">Emergency 112 Contacts</span>
+</a>
+<!-- Daily Checklist -->
+<a class="flex items-center space-x-3 text-slate-400 hover:text-white hover:bg-slate-800/60 px-3 py-2 rounded-lg text-xs font-medium transition" href="#">
+<svg class="w-4 h-4 text-green-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="truncate">Daily Checklist</span>
+</a>
+<!-- Feedback & Support -->
+<a class="flex items-center space-x-3 text-slate-400 hover:text-white hover:bg-slate-800/60 px-3 py-2 rounded-lg text-xs font-medium transition" href="#">
+<svg class="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="truncate">Feedback &amp; Support</span>
+</a>
+</nav>
+</div>
+<!-- Bottom Small Badge / Logo Indicator -->
+<div class="px-3 pb-3 space-y-2.5"><div class="bg-[#111827] rounded-xl p-2.5 border border-slate-800 shadow-sm"><div class="flex items-center justify-between pb-1.5 border-b border-slate-800/80"><div class="flex items-center space-x-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span><span class="text-[11px] font-bold text-white tracking-tight">LoRa Mesh Radio: Active</span></div><span class="text-[9px] bg-emerald-950/80 text-emerald-300 font-bold px-1.5 py-0.5 rounded border border-emerald-800/60">433.9 MHz</span></div><div class="mt-2 space-y-1 text-[10px] text-slate-300"><div class="flex justify-between items-center"><span class="text-slate-400">Peers in Range:</span><span class="font-bold text-emerald-400">14 connected</span></div><div class="flex justify-between items-center"><span class="text-slate-400">Offline Sync:</span><span class="font-semibold text-slate-200">100% Synced (Dexie DB)</span></div></div><div class="mt-2 pt-2 border-t border-slate-800/80"><button class="w-full bg-red-600/90 hover:bg-red-600 text-white font-bold text-[10px] py-1 px-2 rounded-lg flex items-center justify-center space-x-1 transition shadow-sm active:scale-95"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg><span class="">Local Community SOS</span></button></div></div><div class="bg-[#0f172a] rounded-xl p-2.5 border border-slate-800"><div class="flex items-center justify-between text-[10px] text-slate-400 font-semibold mb-1"><span class="">Relief Helplines</span><span class="text-[9px] text-emerald-400">Toll-Free</span></div><div class="grid grid-cols-2 gap-1.5 text-[10px]"><div class="bg-slate-900/80 border border-slate-800 p-1.5 rounded flex items-center justify-between"><span class="text-slate-300">SDRF:</span><span class="font-bold text-white">1079</span></div><div class="bg-slate-900/80 border border-slate-800 p-1.5 rounded flex items-center justify-between"><span class="text-slate-300">NDRF:</span><span class="font-bold text-white">9711</span></div></div></div></div><div class="p-3 border-t border-slate-800/60 flex items-center">
+<div class="w-6 h-6 rounded-full bg-slate-900 border border-slate-700 flex items-center justify-center text-[10px] font-bold text-slate-300">
+          N
+        </div>
+</div>
+</aside>
+<!-- END: LeftSidebar -->
+<!-- BEGIN: MainContentBody -->
+<main class="flex-1 p-4 overflow-y-auto space-y-4" data-purpose="citizen-workspace">
+<!-- Current Location Bar -->
+<div class="bg-white rounded-xl px-4 py-2.5 shadow-sm border border-slate-200/80 flex items-center justify-between" data-purpose="location-bar">
+<!-- Location Indicator -->
+<div class="flex items-center space-x-2 text-xs font-semibold text-slate-800">
+<svg class="w-4 h-4 text-red-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="">Your Location: <span class="text-slate-900 font-bold">Guwahati, Assam</span></span>
+<button aria-label="Select location" class="text-slate-400 hover:text-slate-600 ml-1">
+<svg class="w-3.5 h-3.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<!-- Language Selector -->
+<div class="flex items-center space-x-2">
+<div class="flex items-center space-x-1.5 text-xs text-slate-600 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-lg px-2.5 py-1 cursor-pointer">
+<svg class="w-3.5 h-3.5 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="font-medium text-slate-700">English</span>
+<svg class="w-3 h-3 text-slate-400 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- BEGIN: TopOverviewCardsGrid (4 Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5" data-purpose="status-overview-grid">
+<!-- CARD 1: Flood Warning (Red Card) -->
+<div class="bg-[#d91e28] text-white rounded-xl p-4 shadow-sm relative overflow-hidden flex flex-col justify-between" data-purpose="flood-warning-card">
+<!-- Background Watermark Warning Icon -->
+<div class="absolute right-0 bottom-0 translate-x-2 translate-y-3 opacity-15 pointer-events-none">
+<svg class="w-28 h-28 text-white" fill="currentColor" viewBox="0 0 24 24">
+<path d="M12 2L1 21h22L12 2zm0 4l7.53 13H4.47L12 6zm-1 5v4h2v-4h-2zm0 6v2h2v-2h-2z"></path>
+</svg>
+</div>
+<div>
+<div class="flex items-center space-x-1.5 text-xs font-bold tracking-wide uppercase text-red-100">
+<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+<path clip-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" fill-rule="evenodd"></path>
+</svg>
+<span class="">Flood Warning</span>
+</div>
+<h3 class="text-sm font-bold text-white mt-1.5 leading-snug">Brahmaputra River Basin</h3>
+<p class="text-[11px] text-red-100 mt-0.5">Avoid low-lying areas. Stay alert!</p>
+</div>
+<div class="mt-4 pt-1">
+<button class="bg-white text-rose-700 font-bold text-xs px-3.5 py-1.5 rounded-full shadow hover:bg-rose-50 transition active:scale-95">
+              View Details
+            </button>
+</div>
+</div>
+<!-- CARD 2: Weather Update (White Card) -->
+<div class="bg-white rounded-xl p-4 shadow-sm border border-slate-200/80 flex items-center justify-between" data-purpose="weather-update-card">
+<div>
+<span class="text-[10px] font-bold tracking-wider text-slate-500 uppercase">Weather Update</span>
+<div class="text-2xl font-black text-slate-900 tracking-tight mt-1">28 °C</div>
+<div class="text-xs font-bold text-slate-700 mt-0.5">Light Rain</div>
+<div class="text-[10px] text-slate-400 mt-1">
+              Humidity 82% <span class="mx-1 text-slate-300">|</span> Wind 12 km/h
+            </div>
+</div>
+<!-- Weather Icon Placeholder Box -->
+<div class="w-12 h-12 rounded-2xl bg-indigo-50 border border-indigo-100/60 flex items-center justify-center text-indigo-400 shadow-sm shrink-0">
+<svg class="w-7 h-7 text-indigo-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 00-9.78 2.096A4.001 4.001 0 003 15z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M9 19v2m4-2v2m4-2v2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<!-- CARD 3: Nearest Shelter (White Card) -->
+<div class="bg-white rounded-xl p-4 shadow-sm border border-slate-200/80 flex items-start justify-between" data-purpose="nearest-shelter-card">
+<div class="space-y-1">
+<span class="text-[10px] font-bold tracking-wider text-slate-500 uppercase">Nearest Shelter</span>
+<h3 class="text-xs font-bold text-slate-900 mt-1 leading-tight">Dispur High School</h3>
+<p class="text-xs font-semibold text-emerald-600"><span class="font-bold">2.4</span> km away</p>
+<div class="pt-2">
+<a class="inline-flex items-center space-x-1 text-xs font-bold text-emerald-700 hover:text-emerald-800" href="#">
+<svg class="w-3.5 h-3.5 text-emerald-600 rotate-45" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+<path d="M12 19V5m0 0l-7 7m7-7l7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="">View on Map</span>
+</a>
+</div>
+</div>
+<!-- Green Shelter Icon -->
+<div class="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 shrink-0">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<!-- CARD 4: Emergency Call 112 (Red Card) -->
+<div class="bg-[#d91e28] text-white rounded-xl p-4 shadow-sm flex items-center justify-between relative overflow-hidden" data-purpose="emergency-call-card">
+<div>
+<span class="text-[10px] font-bold tracking-wider text-red-100 uppercase">Emergency Call</span>
+<div class="text-3xl font-black text-white tracking-tight leading-none my-1">112</div>
+<div class="text-[9px] text-red-100 font-medium">SRS Channel: sos.alert (P1)</div>
+</div>
+<!-- SOS Press Big Round Button -->
+<button class="w-14 h-14 rounded-full bg-white shadow-lg flex flex-col items-center justify-center text-rose-600 hover:scale-105 active:scale-95 transition shrink-0 group border-2 border-red-100">
+<span class="text-xs font-black tracking-tighter leading-none group-hover:text-red-700">SOS</span>
+<span class="text-[8px] font-bold uppercase tracking-wider text-rose-500 mt-0.5">PRESS</span>
+</button>
+</div>
+</div>
+<!-- END: TopOverviewCardsGrid -->
+<!-- BEGIN: LowerInteractiveSection (Map + Quick Actions) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-4" data-purpose="map-and-actions-section">
+<!-- Live Safety Map Container (2 Columns wide) -->
+<section class="lg:col-span-2 bg-white rounded-xl p-3.5 shadow-sm border border-slate-200/80 flex flex-col justify-between" data-purpose="safety-map-container">
+<!-- Map Header with filters and legend -->
+<div class="flex flex-wrap items-center justify-between gap-2 pb-2.5 border-b border-slate-100 text-xs">
+<!-- Title & State Dropdown -->
+<div class="flex items-center space-x-2">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0"></span>
+<h2 class="font-bold text-slate-900 text-xs">Live Safety Map</h2>
+<div class="flex items-center space-x-1 text-slate-500 text-[11px] ml-1">
+<span class="">State / Region:</span>
+<select aria-label="Filter by state or region" class="border-slate-200 text-xs py-0.5 px-2 rounded-md bg-slate-50 font-medium text-slate-700 focus:ring-emerald-500 focus:border-emerald-500">
+<option>Assam</option>
+<option>Guwahati Urban</option>
+<option>Kamrup Metro</option>
+</select>
+</div>
+</div>
+<!-- Legend Pills & Filters Button -->
+<div class="flex items-center space-x-3 text-[10px] text-slate-600 flex-wrap">
+<div class="flex items-center space-x-1">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<span class="">Safe Zone</span>
+</div>
+<div class="flex items-center space-x-1">
+<span class="w-2 h-2 rounded-full bg-amber-400"></span>
+<span class="">Caution</span>
+</div>
+<div class="flex items-center space-x-1">
+<span class="w-2 h-2 rounded-full bg-red-600"></span>
+<span class="">Danger</span>
+</div>
+<div class="flex items-center space-x-1">
+<span class="w-2 h-2 rounded-full bg-blue-500"></span>
+<span class="">Shelter</span>
+</div>
+<div class="flex items-center space-x-1">
+<span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+<span class="">You</span>
+</div>
+<!-- Filter Button -->
+<button class="flex items-center space-x-1 text-slate-700 bg-slate-100 hover:bg-slate-200 px-2 py-0.5 rounded border border-slate-300 font-medium text-[10px] transition">
+<svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="">Filters</span>
+</button>
+</div>
+</div>
+<!-- Map Surface Area -->
+<div class="relative w-full h-[340px] rounded-lg mt-2 overflow-hidden border border-slate-200 map-pattern flex items-center justify-center"><svg class="absolute inset-0 w-full h-full pointer-events-none" preserveAspectRatio="none" viewBox="0 0 600 350"><defs><linearGradient id="riverGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#bfdbfe" stop-opacity="0.9"></stop><stop offset="50%" stop-color="#93c5fd" stop-opacity="0.95"></stop><stop offset="100%" stop-color="#60a5fa" stop-opacity="0.9"></stop></linearGradient><pattern id="hazardPattern" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="12" fill="rgba(239, 68, 68, 0.15)"></rect><rect x="6" width="6" height="12" fill="transparent"></rect></pattern></defs><rect x="200" y="110" width="190" height="80" rx="16" fill="url(#hazardPattern)" stroke="#f87171" stroke-width="1.5" stroke-dasharray="4 3"></rect><path d="M-20,115 C130,135 220,80 340,112 C470,140 520,95 620,90" fill="none" stroke="url(#riverGrad)" stroke-linecap="round" stroke-width="32"></path><path d="M-20,115 C130,135 220,80 340,112 C470,140 520,95 620,90" fill="none" stroke="#3b82f6" stroke-linecap="round" stroke-width="16" stroke-opacity="0.8"></path><circle cx="270" cy="138" fill="#ef4444" fill-opacity="0.25" r="52"></circle><circle cx="270" cy="138" fill="#dc2626" fill-opacity="0.35" r="26"></circle><polygon fill="#86efac" fill-opacity="0.3" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="3 2" points="90,240 180,195 240,255 160,305"></polygon><path d="M 210,215 Q 280,240 375,175" fill="none" stroke="#059669" stroke-width="3" stroke-dasharray="6 4" stroke-linecap="round"></path><polygon points="375,175 365,178 370,186" fill="#059669"></polygon><path d="M 90,230 Q 140,260 210,215" fill="none" stroke="#10b981" stroke-width="2.5" stroke-dasharray="4 3" stroke-linecap="round"></path><g transform="translate(315, 115)"><circle cx="14" cy="14" r="13" fill="#1e40af" stroke="#ffffff" stroke-width="1.5"></circle><text x="14" y="18" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">⛵</text><rect x="-16" y="29" width="60" height="15" rx="3" fill="rgba(15, 23, 42, 0.9)"></rect><text x="14" y="40" text-anchor="middle" fill="#93c5fd" font-size="8" font-weight="bold">NDRF Boat 02</text></g><g transform="translate(145, 120)"><circle cx="12" cy="12" r="11" fill="#2563eb" stroke="#ffffff" stroke-width="1.5"></circle><text x="12" y="16" text-anchor="middle" fill="#ffffff" font-size="9" font-weight="bold">⛵</text><rect x="-14" y="26" width="52" height="14" rx="3" fill="rgba(15, 23, 42, 0.85)"></rect><text x="12" y="36" text-anchor="middle" fill="#93c5fd" font-size="7.5" font-weight="bold">NDRF Boat 01</text></g></svg><div class="absolute top-3 left-3 bg-white/95 backdrop-blur-sm rounded-lg p-1.5 shadow-sm border border-slate-200 flex items-center space-x-1.5 z-10"><span class="text-[9px] font-bold text-slate-500 uppercase px-1">Layers:</span><button class="px-2 py-0.5 rounded bg-blue-50 text-blue-700 font-bold text-[9px] border border-blue-200 flex items-center space-x-1"><span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span><span class="">Flood Depth</span></button><button class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 font-bold text-[9px] border border-emerald-200 flex items-center space-x-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span><span class="">Shelters</span></button><button class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium text-[9px] hover:bg-slate-200">Corridors</button><button class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium text-[9px] hover:bg-slate-200">Rescue Boats</button></div><div class="absolute top-[32%] left-[45%] flex flex-col items-center"><span class="animate-ping absolute inline-flex h-6 w-6 rounded-full bg-red-400 opacity-75"></span><div class="w-5 h-5 rounded-full bg-red-600 text-white flex items-center justify-center shadow-lg border-2 border-white z-10 text-[9px] font-bold">!</div><span class="bg-red-600/90 text-white text-[9px] font-semibold px-1 rounded shadow mt-0.5">High Inundation</span></div><div class="absolute top-[48%] left-[62%] flex flex-col items-center"><div class="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center shadow border-2 border-white text-[10px]"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg></div><span class="bg-white/95 text-slate-800 font-bold text-[9px] px-1 rounded shadow border border-slate-200 mt-0.5">Dispur Shelter</span></div><div class="absolute top-[65%] left-[72%] flex flex-col items-center"><div class="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow border-2 border-white text-[9px] font-bold">C2</div><span class="bg-white/95 text-slate-800 font-semibold text-[8px] px-1 rounded shadow border border-slate-200 mt-0.5">Dispur College (85%)</span></div><div class="absolute top-[68%] left-[16%] flex flex-col items-center"><div class="w-5 h-5 rounded-full bg-indigo-600 text-white flex items-center justify-center shadow border-2 border-white text-[9px] font-bold">+</div><span class="bg-white/95 text-slate-800 font-semibold text-[8px] px-1 rounded shadow border border-slate-200 mt-0.5">Medical Camp Khanapara</span></div><div class="absolute top-[58%] left-[34%] flex flex-col items-center"><div class="relative"><span class="animate-ping absolute inline-flex h-4 w-4 rounded-full bg-indigo-400 opacity-75"></span><div class="w-4 h-4 rounded-full bg-indigo-600 border-2 border-white shadow"></div></div><span class="bg-indigo-900 text-white font-semibold text-[8px] px-1 rounded shadow mt-0.5">You (Rohit)</span></div><div class="absolute top-3 right-3 flex flex-col bg-white rounded-lg shadow-md border border-slate-200 overflow-hidden text-slate-700 font-bold text-xs" data-purpose="zoom-controls"><button class="w-7 h-7 flex items-center justify-center hover:bg-slate-100 border-b border-slate-200 transition">+</button><button class="w-7 h-7 flex items-center justify-center hover:bg-slate-100 transition">−</button></div><div class="absolute bottom-3 left-3 flex flex-col sm:flex-row gap-2 max-w-lg"><div class="bg-white/95 backdrop-blur-sm rounded-lg p-2 shadow-md border border-slate-200/90 text-left text-[10px]" data-purpose="map-status-overlay"><div class="font-bold text-slate-900 mb-0.5">Guwahati Sector 2 Status:</div><div class="text-emerald-700 font-semibold flex items-center space-x-1"><span class="">✓ Nearest Safe Elevation: 2.1 km South</span></div><div class="text-rose-600 font-medium mt-0.5 truncate">• Low Road Inundated: GS Road near Ulubari</div></div><div class="bg-emerald-50/95 backdrop-blur-sm rounded-lg p-2 shadow-md border border-emerald-200 text-left text-[10px]"><div class="font-bold text-emerald-900 mb-0.5 flex items-center space-x-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span><span class="">Dispur Evacuation Corridor #3</span></div><div class="text-emerald-800 font-semibold">Status: Clear &amp; Open</div><div class="text-slate-600 text-[9px] mt-0.5">Low water level • 4x4 &amp; Pedestrian safe</div></div></div></div>
+<div class="mt-3.5 bg-gradient-to-r from-[#eff6ff] via-[#f0fdf4] to-[#f8fafc] rounded-xl border border-blue-200/80 p-3.5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-sm" data-purpose="magic-ai-suggests"><div class="flex items-start space-x-3"><div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-md shadow-blue-500/20"><svg class="w-5 h-5 text-white animate-pulse" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg></div><div class="space-y-1"><div class="flex items-center space-x-2 flex-wrap gap-y-1"><span class="text-xs font-black text-slate-900 tracking-tight flex items-center gap-1"><span class="text-blue-600 font-extrabold">Magic AI</span> suggests</span><span class="bg-blue-100 text-blue-700 text-[10px] font-bold px-2 py-0.5 rounded-full border border-blue-200">Predictive Hydrology</span><span class="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-1.5 py-0.2 border border-emerald-200 rounded">Confidence: 94%</span></div><p class="text-xs text-slate-700 leading-snug font-medium">Water level near Guwahati Sector 2 floodplain is rising (+14cm in last 30m). Consider moving toward Dispur High School relief shelter before 17:00 IST.</p></div></div><div class="flex items-center space-x-2 shrink-0 self-end sm:self-center"><button class="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs px-3.5 py-2 rounded-lg shadow transition active:scale-95 whitespace-nowrap flex items-center space-x-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg><span class="">View Safe Route</span></button><button class="text-slate-500 hover:text-slate-800 text-xs font-semibold px-2.5 py-2 rounded-lg hover:bg-slate-100 transition">Dismiss</button></div></div><div class="mt-3.5 grid grid-cols-1 md:grid-cols-3 gap-3" data-purpose="community-feed-row"><div class="bg-slate-50 border border-slate-200/90 rounded-xl p-3 shadow-xs"><div class="flex items-center justify-between pb-1.5 border-b border-slate-200"><div class="flex items-center space-x-1.5"><span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span><h4 class="text-xs font-bold text-slate-900">Latest Field Updates</h4></div><span class="text-[10px] text-slate-400 font-semibold">Live</span></div><div class="mt-2 space-y-1.5 text-[11px]"><div class="bg-white p-2 rounded-lg border border-slate-200 shadow-xs"><span class="font-semibold text-slate-800 block leading-tight">NDRF deployed 4 boats near Saraighat Bridge</span><span class="text-[9px] text-slate-500 mt-0.5 block">8 mins ago • River Rescue Unit #3</span></div><div class="bg-white p-2 rounded-lg border border-slate-200 shadow-xs"><span class="font-semibold text-slate-800 block leading-tight">Food ration distribution active at Dispur High</span><span class="text-[9px] text-slate-500 mt-0.5 block">14 mins ago • Red Cross Assam</span></div></div></div><div class="bg-amber-50/50 border border-amber-200/90 rounded-xl p-3 shadow-xs"><div class="flex items-center justify-between pb-1.5 border-b border-amber-200"><div class="flex items-center space-x-1.5"><svg class="w-3.5 h-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg><h4 class="text-xs font-bold text-amber-900">Disaster Guidelines</h4></div><span class="text-[9px] font-bold text-amber-700 bg-amber-100 px-1.5 py-0.5 rounded">Flash Flood</span></div><div class="mt-2 space-y-1.5 text-[11px]"><div class="bg-white p-2 rounded-lg border border-amber-200/80 shadow-xs"><span class="font-bold text-slate-800 block leading-tight">Cut main power grid &amp; LPG valves</span><span class="text-[10px] text-slate-600 mt-0.5 block">Prevent electrical shorts in ground floor meters</span></div><div class="bg-white p-2 rounded-lg border border-amber-200/80 shadow-xs"><span class="font-bold text-slate-800 block leading-tight">Boil drinking water advisory in effect</span><span class="text-[10px] text-slate-600 mt-0.5 block">Use chlorine purification drops if water boiled</span></div></div></div><div class="bg-emerald-50/50 border border-emerald-200/90 rounded-xl p-3 shadow-xs flex flex-col justify-between"><div class="flex items-center justify-between pb-1.5 border-b border-emerald-200"><div class="flex items-center space-x-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><h4 class="text-xs font-bold text-emerald-950">Community Volunteers</h4></div><span class="text-[9px] font-bold text-emerald-700 bg-emerald-100 px-1.5 py-0.5 rounded">Kamrup Metro</span></div><div class="mt-2 space-y-1.5 text-[11px]"><div class="bg-white p-2 rounded-lg border border-emerald-200/80 shadow-xs flex items-center justify-between"><div class="truncate"><span class="font-bold text-slate-800 block leading-tight">142 Volunteers On-Duty</span><span class="text-[10px] text-slate-500 truncate block">Dispur, Beltola &amp; GS Road sectors</span></div><span class="text-[10px] font-extrabold text-emerald-600 shrink-0 ml-1">Active</span></div><button class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs py-1.5 px-2 rounded-lg shadow-sm transition flex items-center justify-center space-x-1 mt-1 active:scale-95"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path></svg><span class="">Request Volunteer Help</span></button></div></div></div></section>
+<!-- BEGIN: QuickActionsPanel (Right Column) -->
+<section class="bg-white rounded-xl p-4 shadow-sm border border-slate-200/80 flex flex-col justify-between" data-purpose="quick-actions-panel">
+<div>
+<!-- Section Header -->
+<div class="flex items-center space-x-1.5 mb-3 text-emerald-700 font-bold text-xs uppercase tracking-wide">
+<svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+<path clip-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" fill-rule="evenodd"></path>
+</svg>
+<h2 class="text-slate-900 font-extrabold text-xs tracking-wider">QUICK ACTIONS</h2>
+</div>
+<!-- Action Tiles List -->
+<div class="space-y-2.5">
+<!-- Tile 1: Report Incident -->
+<button class="w-full flex items-center space-x-3 p-2.5 rounded-xl border border-slate-200/90 hover:border-red-300 hover:bg-rose-50/40 transition text-left group">
+<div class="w-9 h-9 rounded-lg bg-red-50 border border-red-200 flex items-center justify-center text-red-600 shrink-0 group-hover:bg-red-100 transition">
+<svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="truncate">
+<h4 class="text-xs font-bold text-slate-900 leading-tight">Report Incident</h4>
+<p class="text-[10px] text-slate-500 truncate">Waterlogging, tree fall, hazard</p>
+</div>
+</button>
+<!-- Tile 2: Request Help -->
+<button class="w-full flex items-center space-x-3 p-2.5 rounded-xl border border-slate-200/90 hover:border-amber-300 hover:bg-amber-50/40 transition text-left group">
+<div class="w-9 h-9 rounded-lg bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600 shrink-0 group-hover:bg-amber-100 transition">
+<svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="9"></circle>
+<circle cx="12" cy="12" r="4"></circle>
+<path d="M4.93 4.93l4.24 4.24m5.66 5.66l4.24 4.24m-14.14 0l4.24-4.24m5.66-5.66l4.24-4.24"></path>
+</svg>
+</div>
+<div class="truncate">
+<h4 class="text-xs font-bold text-slate-900 leading-tight">Request Help</h4>
+<p class="text-[10px] text-slate-500 truncate">Trapped, medical need, boat</p>
+</div>
+</button>
+<!-- Tile 3: Check-In Safe -->
+<button class="w-full flex items-center space-x-3 p-2.5 rounded-xl border border-slate-200/90 hover:border-emerald-300 hover:bg-emerald-50/40 transition text-left group">
+<div class="w-9 h-9 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 shrink-0 group-hover:bg-emerald-100 transition">
+<svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="truncate">
+<h4 class="text-xs font-bold text-slate-900 leading-tight">Check-In Safe</h4>
+<p class="text-[10px] text-slate-500 truncate">Update FamilySafetyStatus</p>
+</div>
+</button>
+<!-- Tile 4: Upload Photo/Video -->
+<button class="w-full flex items-center space-x-3 p-2.5 rounded-xl border border-slate-200/90 hover:border-blue-300 hover:bg-blue-50/40 transition text-left group">
+<div class="w-9 h-9 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 shrink-0 group-hover:bg-blue-100 transition">
+<svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="truncate">
+<h4 class="text-xs font-bold text-slate-900 leading-tight">Upload Photo/Video</h4>
+<p class="text-[10px] text-slate-500 truncate">Evidence uploaded to AWS S3</p>
+</div>
+</button>
+</div>
+<div class="mt-4 pt-3 border-t border-slate-100 space-y-4" data-purpose="supplementary-widgets"><div class="bg-slate-50 rounded-xl p-3 border border-slate-200/90 shadow-sm"><div class="flex items-center justify-between mb-2"><div class="flex items-center space-x-1.5"><svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg><span class="text-xs font-bold text-slate-900">Family Circle</span><span class="text-[10px] text-slate-500 font-medium">(4)</span></div><a href="#" class="text-[11px] font-semibold text-blue-600 hover:text-blue-800">Manage</a></div><div class="grid grid-cols-2 gap-2 text-[11px]"><div class="bg-white p-2 rounded-lg border border-slate-200 shadow-xs flex items-center justify-between"><span class="font-bold text-slate-800 truncate">Mom</span><span class="inline-flex items-center text-[10px] font-semibold text-emerald-700"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block mr-1"></span>Safe</span></div><div class="bg-white p-2 rounded-lg border border-slate-200 shadow-xs flex items-center justify-between"><span class="font-bold text-slate-800 truncate">Priya</span><span class="inline-flex items-center text-[10px] font-semibold text-emerald-700"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block mr-1"></span>Safe</span></div><div class="bg-white p-2 rounded-lg border border-amber-200 bg-amber-50/30 shadow-xs flex items-center justify-between"><span class="font-bold text-slate-800 truncate">Rahul</span><span class="inline-flex items-center text-[10px] font-bold text-amber-700"><span class="w-1.5 h-1.5 rounded-full bg-amber-500 inline-block mr-1 animate-pulse"></span>Pending</span></div><div class="bg-white p-2 rounded-lg border border-slate-200 shadow-xs flex items-center justify-between"><span class="font-bold text-slate-800 truncate">Dad</span><span class="inline-flex items-center text-[10px] font-semibold text-emerald-700"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block mr-1"></span>Safe</span></div></div></div><div class="bg-[#0f172a] text-white rounded-xl p-3 shadow-sm border border-slate-800" data-purpose="telemetry-widget"><div class="flex items-center justify-between pb-1.5 border-b border-slate-800"><div class="flex items-center space-x-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span><span class="text-[11px] font-bold tracking-tight text-white">Brahmaputra Telemetry</span></div><span class="text-[9px] text-emerald-400 bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-800/60 font-semibold">AS-GHY-02</span></div><div class="mt-2 flex items-baseline justify-between"><span class="text-[10px] text-slate-400">Discharge (Pandu Ghat):</span><span class="text-xs font-black text-rose-400 tracking-tight">412,000 Cusec</span></div><div class="text-[10px] text-rose-300 font-semibold mt-0.5 flex items-center space-x-1"><svg class="w-3 h-3 text-rose-400 shrink-0 inline" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg><span class="">+2.1m above danger mark • Velocity 3.8 m/s</span></div><div class="mt-2 pt-1 border-t border-slate-800/80 flex items-center justify-between text-[9px] text-slate-400"><span class="">Live Sync: 3 mins ago</span><span class="text-blue-400 hover:text-blue-300 cursor-pointer font-medium">Station View →</span></div></div><div class="bg-rose-50 border border-rose-200 rounded-xl p-2.5 flex items-center justify-between shadow-xs"><div class="flex items-center space-x-2"><div class="w-7 h-7 rounded-lg bg-rose-600 text-white flex items-center justify-center font-bold text-xs shrink-0"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path></svg></div><div class="leading-none"><span class="text-[11px] font-bold text-slate-900 block">Disaster Control Helplines</span><span class="text-[9px] text-slate-500 font-medium">Toll-Free 24x7 Emergency Desk</span></div></div><div class="flex items-center space-x-1"><a href="tel:112" class="bg-rose-600 text-white text-[10px] font-bold px-2 py-1 rounded shadow hover:bg-rose-700 transition">112</a><a href="tel:1070" class="bg-slate-800 text-white text-[10px] font-bold px-2 py-1 rounded shadow hover:bg-slate-900 transition">1070</a></div></div></div></div>
+<!-- Bottom subtle reassurance notice -->
+<div class="mt-3 pt-2 text-[9px] text-slate-400 text-center border-t border-slate-100">
+            Emergency responses prioritized by verified GPS triage
+          </div>
+</section>
+<!-- END: QuickActionsPanel -->
+</div>
+<!-- END: LowerInteractiveSection -->
+</main>
+<!-- END: MainContentBody -->
+</div>
+<!-- END: MainDashboardLayout -->
+<!-- Interactivity Script for Buttons and Feedback -->
+<script data-purpose="dashboard-interactions">
+    document.addEventListener('DOMContentLoaded', () => {
+      // SOS Button click feedback
+      const sosBtn = document.querySelector('[data-purpose="emergency-call-card"] button');
+      if (sosBtn) {
+        sosBtn.addEventListener('click', () => {
+          alert('EMERGENCY SOS TRIGGERED:\nCalling 112 emergency services and broadcasting GPS beacon to State Relief Response team.');
+        });
+      }
+
+      // Quick action buttons feedback
+      const actionButtons = document.querySelectorAll('[data-purpose="quick-actions-panel"] button');
+      actionButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const actionTitle = button.querySelector('h4')?.innerText || 'Action';
+          console.log(`Action initiated: ${actionTitle}`);
+        });
+      });
+    });
+  </script>
+</body></html>

@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary-container":"#2563eb","on-primary-container":"#eeefff","surface-dim":"#cbdbf5","surface-container-high":"#dce9ff","surface-tint":"#0053db","surface-container-low":"#eff4ff","tertiary-fixed":"#ffdad6","surface-container":"#e5eeff","inverse-primary":"#b4c5ff","on-tertiary-fixed-variant":"#93000b","on-tertiary-container":"#ffecea","on-secondary":"#ffffff","secondary-fixed":"#dae2fd","on-primary":"#ffffff","on-tertiary-fixed":"#410002","on-tertiary":"#ffffff","surface-variant":"#d3e4fe","error-container":"#ffdad6","primary-fixed-dim":"#b4c5ff","error":"#ba1a1a","tertiary":"#ae0010","background":"#f8f9ff","tertiary-fixed-dim":"#ffb4ab","secondary":"#565e74","surface-container-highest":"#d3e4fe","inverse-surface":"#213145","primary":"#004ac6","surface-container-lowest":"#ffffff","secondary-container":"#dae2fd","on-error":"#ffffff","on-background":"#0b1c30","outline-variant":"#c3c6d7","on-primary-fixed-variant":"#003ea8","on-surface-variant":"#434655","secondary-fixed-dim":"#bec6e0","on-secondary-fixed-variant":"#3f465c","on-primary-fixed":"#00174b","on-secondary-container":"#5c647a","surface-bright":"#f8f9ff","on-error-container":"#93000a","primary-fixed":"#dbe1ff","inverse-on-surface":"#eaf1ff","surface":"#f8f9ff","outline":"#737686","tertiary-container":"#d52022","on-surface":"#0b1c30","on-secondary-fixed":"#131b2e"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xl":"1.5rem","space-md":"0.75rem","gutter-normal":"1rem","space-sm":"0.5rem","gutter-wide":"1.5rem","space-base":"1rem","gutter-compact":"0.75rem","space-2xs":"0.125rem","space-xs":"0.25rem","space-3xl":"2.5rem","space-2xl":"2rem","space-lg":"1.25rem"},"fontFamily":{"body-lg":["Inter"],"label-sm":["Inter"],"label-lg":["Inter"],"data-tabular":["Inter"],"headline-lg":["Manrope"],"display-lg-mobile":["Manrope"],"headline-xl":["Manrope"],"label-md":["Inter"],"body-sm":["Inter"],"body-md":["Inter"],"display-lg":["Manrope"],"headline-md":["Manrope"]},"fontSize":{"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.05em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"data-tabular":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"500"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"700"}],"display-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-xl":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.03em","fontWeight":"800"}],"headline-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-surface-container-low px-gutter-wide py-space-xs hidden md:flex items-center justify-between"><div class="flex items-center gap-space-md"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary inline-block"></span>Government of India • Ministry of Home Affairs</span><span class="text-outline-variant text-label-sm">|</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">National Emergency Triage &amp; Hydro-Meteorological Response Grid</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-space-2xs rounded bg-surface-container text-on-surface-variant font-data-tabular text-data-tabular"><span class="w-2 h-2 rounded-full bg-[#16A34A] animate-pulse"></span><span>All 4 Nodes Synced</span><span class="text-secondary">•</span><span>99.98% SLA</span></div><div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm"><span class="material-symbols-outlined text-[14px]">schedule</span><span class="font-data-tabular text-data-tabular">IST 24/7 LIVE</span></div></div></div><div class="h-16 w-full px-gutter-wide flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-md"><img alt="Brand logo. - Primary color: #2563eb
+- Font: manrope
+- Mode: dark
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V6Hh5jDrtoauI6TRQM_XcoGdmo8s3RwTP482Ge6TFX_sSxzZGnglhzK7rtVYltSseNi9cJtTGtOeXq0CF94T_eJ-NcSvxki49bmOBAOilz6Pe9Gp3VAOl_FnRuwCr28snnEHYa9Aq7zAGZkqMaySHJHYlf9WBQ3Sy_VtosKNepJBV1ONqrP8BQ9RmvvmgAtCuvOcey1ZNrOFxT2SijKNNtYB-8sFRTJoh3XlEcOJC_mSab9NICde7kilk"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-lg text-headline-lg tracking-tight text-primary font-bold">RakshaSetu</span><span class="px-space-xs py-space-2xs rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase">Portal</span></div><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary -mt-0.5">Disaster Command Interface</span></div></div><nav class="hidden xl:flex items-center gap-space-sm pl-space-md" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg"><a aria-current="page" class="px-space-md py-space-xs transition-colors bg-primary-container text-on-primary-container font-bold rounded-lg" data-path="overview" href="#">Overview</a><a class="px-space-md py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="hydrological-bulletin" href="#">Hydrological Bulletin</a><a class="px-space-md py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="district-advisories" href="#">District Advisories</a><a class="px-space-md py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="resource-allocations" href="#">Resource Allocations</a><a class="px-space-md py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="evacuation-routes" href="#">Evacuation Shelters</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center bg-surface-container-low rounded p-space-2xs gap-space-2xs"><button class="px-space-sm py-space-2xs font-label-sm text-label-sm bg-surface-container-lowest text-primary rounded font-bold shadow-[0_1px_2px_rgba(0,0,0,0.04)]">EN</button><button class="px-space-sm py-space-2xs font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">हिन्दी</button><button class="px-space-sm py-space-2xs font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">অসমীয়া</button><button class="px-space-sm py-space-2xs font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">বাংলা</button></div><a class="flex items-center gap-space-xs bg-tertiary text-on-tertiary px-space-md py-space-xs rounded font-label-lg text-label-lg uppercase tracking-wider hover:bg-tertiary-container transition-colors shadow-[0_1px_4px_rgba(174,0,16,0.25)]" href="tel:112"><span class="material-symbols-outlined text-[18px]">e911_emergency</span><span>112 SOS</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background flex-1"><div class="flex flex-col w-full font-body-md text-on-surface">
+<!-- EMERGENCY BROADCAST BANNER (High Visibility Fail-Safe) -->
+<div class="w-full bg-tertiary text-on-tertiary px-gutter-wide py-space-xs shadow-sm">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-space-xs text-center md:text-left">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] animate-pulse">warning</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Priority Fail-Safe Channel:</span>
+<span class="font-body-sm text-body-sm">In immediate life-threatening flood or seismic danger? Dial directly:</span>
+</div>
+<div class="flex items-center gap-space-md">
+<a class="px-space-sm py-space-2xs bg-on-tertiary text-tertiary font-label-md text-label-md font-bold rounded shadow-sm hover:bg-surface-container-lowest transition-colors flex items-center gap-space-2xs" href="tel:112">
+<span class="material-symbols-outlined text-[16px]">call</span>
+<span>112 (Universal SOS)</span>
+</a>
+<a class="px-space-sm py-space-2xs bg-tertiary-container text-on-tertiary-container font-label-md text-label-md font-bold rounded shadow-sm hover:opacity-95 transition-opacity flex items-center gap-space-2xs" href="tel:1078">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+<span>1078 (NDRF Disaster Hotline)</span>
+</a>
+</div>
+</div>
+</div>
+<!-- HERO SECTION -->
+<section class="relative w-full px-gutter-wide py-space-2xl md:py-space-3xl overflow-hidden bg-gradient-to-b from-surface-container-lowest to-surface">
+<div class="max-w-7xl mx-auto flex flex-col items-center text-center relative z-10">
+<!-- Operational Status Pill -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface shadow-sm mb-space-lg">
+<span class="w-2.5 h-2.5 rounded-full bg-[#16A34A] animate-ping"></span>
+<span class="w-2 h-2 rounded-full bg-[#16A34A] -ml-3.5"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">
+          NATIONAL DISASTER COORDINATION INFRASTRUCTURE • ALL 4 OPERATIONAL TIERS ACTIVE
+        </span>
+</div>
+<!-- Main Headline -->
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg max-w-5xl tracking-tight text-on-surface font-extrabold mb-space-md">
+        Unified Disaster Response, Rapid Evacuation &amp; Emergency Command Hub
+      </h1>
+<!-- Subtitle -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mb-space-xl">
+        A single, resilient fail-open platform connecting citizens in distress, field tactical rescue units, state &amp; national apex command rooms, and infrastructure SecOps administrators under India's unified NDMA triage protocols.
+      </p>
+<!-- Primary Action CTAs -->
+<div class="flex flex-wrap items-center justify-center gap-space-md mb-space-2xl">
+<a class="px-space-xl py-space-md bg-primary text-on-primary font-label-lg text-label-lg font-bold rounded shadow-sm hover:bg-surface-tint transition-all flex items-center gap-space-xs" href="#operational-panels">
+<span class="material-symbols-outlined text-[20px]">layers</span>
+<span>Explore 4 Operational Panels</span>
+</a>
+<a class="px-space-xl py-space-md bg-surface-container-lowest text-on-surface font-label-lg text-label-lg font-bold rounded shadow-sm hover:bg-surface-container transition-all flex items-center gap-space-xs" href="#keycloak-gateway">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+<span>Citizen Web Access</span>
+</a>
+<a class="px-space-xl py-space-md bg-tertiary text-on-tertiary font-label-lg text-label-lg font-bold rounded shadow-sm hover:bg-tertiary-container transition-all flex items-center gap-space-xs" href="tel:112">
+<span class="material-symbols-outlined text-[20px]">e911_emergency</span>
+<span>Launch Emergency SOS 112 (Fail-Open)</span>
+</a>
+</div>
+<!-- Live Architecture Telemetry Ticker -->
+<div class="w-full max-w-4xl p-space-sm bg-surface-container-lowest rounded-xl shadow-sm flex flex-wrap items-center justify-around gap-space-sm font-data-tabular text-data-tabular text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">security</span>
+<span class="font-bold text-on-surface">Keycloak OIDC JWT</span>
+<span class="text-secondary">• RS256 Validated</span>
+</div>
+<div class="hidden sm:inline text-outline-variant">|</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">map</span>
+<span class="font-bold text-on-surface">PostGIS Real-time Mesh</span>
+<span class="text-secondary">• 4 Node Replicated</span>
+</div>
+<div class="hidden sm:inline text-outline-variant">|</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">electric_bolt</span>
+<span class="font-bold text-on-surface">Kafka Ingress:</span>
+<span class="text-[#16A34A] font-bold">8.2k evt/s</span>
+</div>
+<div class="hidden sm:inline text-outline-variant">|</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">cell_tower</span>
+<span class="font-bold text-on-surface">LoRaWAN:</span>
+<span class="text-[#16A34A] font-bold">433.9 MHz Beacon Live</span>
+</div>
+</div>
+</div>
+</section>
+<!-- OPERATIONAL SUMMARY STAT BAR (4 Key National Metrics) -->
+<section class="w-full px-gutter-wide py-space-xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Civilian Registry</span>
+<span class="material-symbols-outlined text-primary text-[20px]">groups</span>
+</div>
+<div class="font-display-lg text-headline-xl md:text-display-lg font-extrabold text-on-surface">
+            1,482,904
+          </div>
+<div class="font-label-md text-label-md text-on-surface-variant flex items-center gap-space-2xs mt-space-2xs">
+<span class="text-[#16A34A] font-bold">↑ 3.2% today</span>
+<span>Across 28 States &amp; 8 UTs</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Tactical Deployment</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">military_tech</span>
+</div>
+<div class="font-display-lg text-headline-xl md:text-display-lg font-extrabold text-on-surface">
+            48 Squads
+          </div>
+<div class="font-label-md text-label-md text-on-surface-variant flex items-center gap-space-2xs mt-space-2xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-bold text-on-surface">NDRF &amp; SDRF</span>
+<span>Live Sector Ops</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Infrastructure SLA</span>
+<span class="material-symbols-outlined text-[#16A34A] text-[20px]">verified</span>
+</div>
+<div class="font-display-lg text-headline-xl md:text-display-lg font-extrabold text-[#16A34A]">
+            99.98%
+          </div>
+<div class="font-label-md text-label-md text-on-surface-variant flex items-center gap-space-2xs mt-space-2xs">
+<span class="font-data-tabular text-data-tabular">Tier-4 Geo-Redundant Cluster</span>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Telemetry Ingress</span>
+<span class="material-symbols-outlined text-primary-container text-[20px]">speed</span>
+</div>
+<div class="font-display-lg text-headline-xl md:text-display-lg font-extrabold text-on-surface">
+            &lt; 42ms
+          </div>
+<div class="font-label-md text-label-md text-on-surface-variant flex items-center gap-space-2xs mt-space-2xs">
+<span class="text-[#16A34A] font-bold">Kafka + Socket.IO</span>
+<span>Sub-second alerts</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MAGIC AI SUGGESTION COMPONENT (Section 3.4) -->
+<section class="w-full px-gutter-wide py-space-lg">
+<div class="max-w-7xl mx-auto">
+<div class="p-space-lg rounded-xl shadow-sm bg-gradient-to-r from-surface-container-low via-surface-container to-surface-container-high relative overflow-hidden">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md relative z-10">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">auto_awesome</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="font-headline-md text-headline-md font-bold text-primary">Magic AI Suggests</span>
+<span class="text-secondary">•</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Unified Cross-Panel Coordination Engine</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium max-w-4xl">
+                Monsoon hydrological crest detected in <strong class="text-tertiary">Brahmaputra &amp; Yamuna basins</strong>. Citizen distress reports (+3.4x spike) automatically correlated with CWC river gauge sensors. Pre-authorizing <strong class="text-primary">NDRF 8th Battalion staging near Sector 9 embankment</strong> with dual motorized Zodiac units.
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 w-full md:w-auto justify-end">
+<button class="px-space-md py-space-xs bg-primary text-on-primary font-label-lg text-label-lg font-bold rounded shadow-sm hover:bg-surface-tint transition-colors flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[18px]">view_timeline</span>
+<span>View Automated Coordination Plan</span>
+</button>
+<button class="px-space-md py-space-xs bg-surface-container-lowest text-secondary hover:text-on-surface font-label-lg text-label-lg font-bold rounded shadow-sm transition-colors">
+              Dismiss
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- COMPREHENSIVE 4 OPERATIONAL PANELS HUB (Main Showcase Grid) -->
+<section class="w-full px-gutter-wide py-space-2xl" id="operational-panels">
+<div class="max-w-7xl mx-auto">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-2xl">
+<div>
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="w-2.5 h-2.5 bg-primary rounded-full"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Multi-Tier Architecture</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl md:text-display-lg font-bold text-on-surface tracking-tight">
+            Four Dedicated Incident Operations Consoles
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Role-isolated, synchronized interfaces built for low-bandwidth resilience, hardware-token verification, and instant situational execution.
+        </p>
+</div>
+<!-- 4 Panel Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-xl">
+<!-- PANEL 01: Citizen Safety App & Web -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<!-- Panel Header -->
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="px-space-xs py-space-2xs rounded bg-surface-container text-primary font-label-sm text-label-sm font-bold uppercase">
+                    PUBLIC ACCESS • PWA &amp; WEB
+                  </span>
+<span class="flex items-center gap-space-2xs font-data-tabular text-data-tabular text-[#16A34A] font-bold">
+<span class="w-2 h-2 rounded-full bg-[#16A34A]"></span> LIVE
+                  </span>
+</div>
+<h3 class="font-headline-lg text-headline-lg font-bold text-on-surface">
+                  Panel 01: Citizen Safety &amp; Rescue Portal
+                </h3>
+<p class="font-label-md text-label-md text-secondary mt-space-2xs">
+                  Target: Citizens in floodplains, evacuees, stranded families, community volunteers
+                </p>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">crisis_alert</span>
+</div>
+</div>
+<!-- Visual Preview Mini-Card -->
+<div class="p-space-md bg-surface-container-low rounded-lg mb-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase font-bold text-secondary">Interactive Hazard Telemetry</span>
+<span class="font-data-tabular text-data-tabular text-tertiary font-bold bg-error-container/40 px-space-xs py-space-2xs rounded">Flood Stage 3</span>
+</div>
+<!-- Mock Graphic / Map representation -->
+<div class="w-full h-40 bg-surface-container rounded relative overflow-hidden mb-space-sm">
+<div class="w-full h-full bg-cover bg-center" data-location="Guwahati Brahmaputra Flood Plain" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAyuolS5xxdIsS9RRdjzecTltJy4Ten2ScxY_ptRn0gNZaz0qIMvs6lrTpYgSW8SZPOHqKw4BxdSs2w912INFijsr49k1X2z17fCri8qp5OOOh2EgJU3f3-FbLm9RiQ_ATKk9f-iTbKdT6wTZrXoTn5zkTnVttzNAZo15G7uxOKLLtjVXFujACilQe7zy_yGAVlyHpeykYpHxD_d2vMHcHIsOc3X-oT2kf4_uee9YlKZ0gx-V07QFhBXA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex flex-col justify-end p-space-sm text-on-primary">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold flex items-center gap-space-2xs">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+                      Submerged Sector 4B • Depth 1.8m
+                    </span>
+<span class="font-label-sm text-label-sm bg-tertiary px-space-xs py-space-2xs rounded uppercase font-bold">Evacuate North</span>
+</div>
+</div>
+</div>
+<!-- Mini Component Row -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm bg-surface-container-lowest rounded shadow-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]">sos</span>
+<div>
+<div class="font-label-sm text-label-sm font-bold text-on-surface">1-Tap 112 SOS</div>
+<div class="font-data-tabular text-[10px] text-secondary">Lat 26.14°N / 91.73°E</div>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded shadow-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[#16A34A] text-[20px]">home_pin</span>
+<div>
+<div class="font-label-sm text-label-sm font-bold text-on-surface">Shelter Verified</div>
+<div class="font-data-tabular text-[10px] text-secondary">Govt Higher Secondary (84% cap)</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Core Capabilities Checklist -->
+<div class="space-y-space-xs mb-space-lg">
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span><strong>Multi-Language Broadcast:</strong> Instant translation into Hindi, Bengali, Assamese, and English</span>
+</div>
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span><strong>Offline Dexie.js Storage:</strong> Local IndexedDB caches maps &amp; shelters without network</span>
+</div>
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span><strong>LoRa Beacon Fallback:</strong> Pings offline SOS packets via nearby 433MHz civil receiver nodes</span>
+</div>
+</div>
+</div>
+<button class="w-full py-space-sm bg-primary text-on-primary font-label-lg text-label-lg font-bold rounded shadow-sm hover:bg-surface-tint transition-colors flex items-center justify-center gap-space-xs">
+<span>Launch Citizen Portal</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- PANEL 02: Field Tactical Ops HUD -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<!-- Panel Header -->
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="px-space-xs py-space-2xs rounded bg-surface-container text-tertiary font-label-sm text-label-sm font-bold uppercase">
+                    TACTICAL FORCES • SECURE HWID LINK
+                  </span>
+<span class="flex items-center gap-space-2xs font-data-tabular text-data-tabular text-[#16A34A] font-bold">
+<span class="w-2 h-2 rounded-full bg-[#16A34A]"></span> SYNCED
+                  </span>
+</div>
+<h3 class="font-headline-lg text-headline-lg font-bold text-on-surface">
+                  Panel 02: Field Tactical Rescue Ops HUD
+                </h3>
+<p class="font-label-md text-label-md text-secondary mt-space-2xs">
+                  Target: NDRF Battalions, SDRF Flood Teams, Quick Response Teams (QRT), Boat Squads
+                </p>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">directions_boat</span>
+</div>
+</div>
+<!-- Visual Preview Mini-Card -->
+<div class="p-space-md bg-surface-container-low rounded-lg mb-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase font-bold text-secondary">Active Dispatch Incident Queue</span>
+<span class="font-data-tabular text-data-tabular text-on-surface font-bold">Squad-Bravo 04</span>
+</div>
+<!-- Live Queue Items -->
+<div class="space-y-space-xs mb-space-sm">
+<div class="p-space-xs bg-surface-container-lowest rounded shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-space-2xs bg-tertiary text-on-tertiary font-label-sm text-label-sm font-bold rounded">P1 CRITICAL</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Terrace Rescue • 8 Civilians</span>
+</div>
+<span class="font-data-tabular text-data-tabular text-secondary">Dist: 420m</span>
+</div>
+<div class="p-space-xs bg-surface-container-lowest rounded shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-space-2xs bg-[#FFFBEB] text-[#D97706] font-label-sm text-label-sm font-bold rounded">P2 HIGH</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Embankment Sandbag Reinforcement</span>
+</div>
+<span class="font-data-tabular text-data-tabular text-secondary">Dist: 1.2km</span>
+</div>
+</div>
+<!-- Telemetry indicators -->
+<div class="grid grid-cols-3 gap-space-xs text-center font-data-tabular text-data-tabular">
+<div class="p-space-xs bg-surface-container-lowest rounded">
+<div class="text-[10px] text-secondary uppercase font-bold">Boat Sonar Depth</div>
+<div class="font-bold text-primary">3.4m Navigable</div>
+</div>
+<div class="p-space-xs bg-surface-container-lowest rounded">
+<div class="text-[10px] text-secondary uppercase font-bold">Current Speed</div>
+<div class="font-bold text-on-surface">4.1 Knots</div>
+</div>
+<div class="p-space-xs bg-surface-container-lowest rounded">
+<div class="text-[10px] text-secondary uppercase font-bold">Mesh Peers</div>
+<div class="font-bold text-[#16A34A]">12 Active</div>
+</div>
+</div>
+</div>
+<!-- Core Capabilities Checklist -->
+<div class="space-y-space-xs mb-space-lg">
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span><strong>Dynamic Triage Engine (P1-P4):</strong> Real-time priority updates with medical payload tags</span>
+</div>
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span><strong>Safe Navigation Corridors:</strong> Bathymetric river clearance routing to prevent motor snagging</span>
+</div>
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span><strong>PTT &amp; Sync on Reconnect:</strong> Push-to-talk field voice channels and auto Dexie merge</span>
+</div>
+</div>
+</div>
+<button class="w-full py-space-sm bg-surface-container text-on-surface font-label-lg text-label-lg font-bold rounded shadow-sm hover:bg-surface-container-high transition-colors flex items-center justify-center gap-space-xs">
+<span>Launch Tactical HUD</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- PANEL 03: Apex Government Command Center -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<!-- Panel Header -->
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="px-space-xs py-space-2xs rounded bg-surface-container text-primary font-label-sm text-label-sm font-bold uppercase">
+                    APEX COMMAND • TIER-3 CLEARANCE
+                  </span>
+<span class="flex items-center gap-space-2xs font-data-tabular text-data-tabular text-[#16A34A] font-bold">
+<span class="w-2 h-2 rounded-full bg-[#16A34A]"></span> SITREP READY
+                  </span>
+</div>
+<h3 class="font-headline-lg text-headline-lg font-bold text-on-surface">
+                  Panel 03: Apex Multi-Agency Command Center
+                </h3>
+<p class="font-label-md text-label-md text-secondary mt-space-2xs">
+                  Target: NDMA Apex Committee, State Relief Commissioners, District Magistrates (DM)
+                </p>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">domain</span>
+</div>
+</div>
+<!-- Visual Preview Mini-Card -->
+<div class="p-space-md bg-surface-container-low rounded-lg mb-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase font-bold text-secondary">National Mobilization Status</span>
+<span class="font-data-tabular text-data-tabular text-primary font-bold">Cabinet SitRep #14</span>
+</div>
+<!-- Graphic Preview with Multi-Agency Data -->
+<div class="grid grid-cols-3 gap-space-xs mb-space-sm">
+<div class="p-space-sm bg-surface-container-lowest rounded shadow-sm">
+<div class="text-[10px] text-secondary uppercase font-bold">Indian Army</div>
+<div class="font-bold text-on-surface">4 Columns</div>
+<div class="font-label-sm text-[10px] text-[#16A34A]">Mobilized</div>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded shadow-sm">
+<div class="text-[10px] text-secondary uppercase font-bold">Indian Air Force</div>
+<div class="font-bold text-on-surface">6 Mi-17 V5</div>
+<div class="font-label-sm text-[10px] text-primary">Air-dropping</div>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded shadow-sm">
+<div class="text-[10px] text-secondary uppercase font-bold">NDRF Reserves</div>
+<div class="font-bold text-on-surface">18 Teams</div>
+<div class="font-label-sm text-[10px] text-tertiary">Pre-positioned</div>
+</div>
+</div>
+<!-- CAP Broadcast Strip Preview -->
+<div class="p-space-xs bg-surface-container-lowest rounded flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-tertiary text-[16px]">podcasts</span>
+<span class="font-bold text-on-surface">Public CAP v1.2 Siren Feed:</span>
+<span class="text-secondary">Assam Eastern Division Alerted</span>
+</div>
+<span class="font-data-tabular text-data-tabular text-[#16A34A] font-bold">ACK 98.4%</span>
+</div>
+</div>
+<!-- Core Capabilities Checklist -->
+<div class="space-y-space-xs mb-space-lg">
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span><strong>CAP v1.2 Warning Broadcast:</strong> Direct triggers for cell broadcast, sirens &amp; SMS gateways</span>
+</div>
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span><strong>Spatial Resource Allocation:</strong> GIS-layering of fuel, food reserves, and helicopter sorties</span>
+</div>
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span><strong>SDRF Relief Treasury Tracking:</strong> Instant digital voucher audit trail under NDMA Act</span>
+</div>
+</div>
+</div>
+<button class="w-full py-space-sm bg-surface-container text-on-surface font-label-lg text-label-lg font-bold rounded shadow-sm hover:bg-surface-container-high transition-colors flex items-center justify-center gap-space-xs">
+<span>Launch Command Center</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- PANEL 04: Admin & SecOps Control -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<!-- Panel Header -->
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="px-space-xs py-space-2xs rounded bg-surface-container text-secondary font-label-sm text-label-sm font-bold uppercase">
+                    SUPERUSER ROOT • L4 INFRASTRUCTURE
+                  </span>
+<span class="flex items-center gap-space-2xs font-data-tabular text-data-tabular text-[#16A34A] font-bold">
+<span class="w-2 h-2 rounded-full bg-[#16A34A]"></span> ENCRYPTED
+                  </span>
+</div>
+<h3 class="font-headline-lg text-headline-lg font-bold text-on-surface">
+                  Panel 04: Admin &amp; SecOps Telemetry Control
+                </h3>
+<p class="font-label-md text-label-md text-secondary mt-space-2xs">
+                  Target: Platform Infrastructure Architects, SecOps Engineers, CERT-In Auditors
+                </p>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+</div>
+<!-- Visual Preview Mini-Card -->
+<div class="p-space-md bg-surface-container-low rounded-lg mb-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase font-bold text-secondary">Cluster Nodes &amp; Kong Gateway</span>
+<span class="font-data-tabular text-data-tabular text-[#16A34A] font-bold">All 16 Pods Healthy</span>
+</div>
+<!-- Cluster Health Grid -->
+<div class="grid grid-cols-2 gap-space-xs mb-space-sm font-data-tabular text-data-tabular">
+<div class="p-space-xs bg-surface-container-lowest rounded shadow-sm">
+<div class="text-[10px] text-secondary font-bold">KAFKA CLUSTER INGRESS</div>
+<div class="font-bold text-on-surface">8,241 msg/sec • 0 Drop</div>
+</div>
+<div class="p-space-xs bg-surface-container-lowest rounded shadow-sm">
+<div class="text-[10px] text-secondary font-bold">POSTGIS SPATIAL NODES</div>
+<div class="font-bold text-on-surface">Write Latency: 1.4ms</div>
+</div>
+</div>
+<!-- SecOps Bar Preview -->
+<div class="p-space-xs bg-surface-container-lowest rounded flex items-center justify-between text-[11px] font-data-tabular">
+<span class="text-secondary font-bold">Keycloak RS256 Rotation</span>
+<span class="text-on-surface font-semibold">Active Key ID: k-2025-08-nd</span>
+<span class="text-[#16A34A] font-bold">TTL: 7h 42m</span>
+</div>
+</div>
+<!-- Core Capabilities Checklist -->
+<div class="space-y-space-xs mb-space-lg">
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span><strong>Role-Based Access Control (RBAC):</strong> Granular hardware-bound permissions &amp; audit logging</span>
+</div>
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span><strong>Prometheus &amp; Grafana Telemetry:</strong> Microsecond latency tracking on CDAC SMS failovers</span>
+</div>
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span><strong>Automated Cold Backups:</strong> Immutable multi-cloud snapshots conforming to Tier-IV mandates</span>
+</div>
+</div>
+</div>
+<button class="w-full py-space-sm bg-surface-container text-on-surface font-label-lg text-label-lg font-bold rounded shadow-sm hover:bg-surface-container-high transition-colors flex items-center justify-center gap-space-xs">
+<span>Launch Admin Control</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- LIVE FIELD DEPLOYMENT & SATELLITE RADAR VISUAL STRIP -->
+<section class="w-full px-gutter-wide py-space-xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Image Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
+<div class="h-48 w-full relative">
+<img class="w-full h-full object-cover" data-alt="National Disaster Response Force tactical flood rescue boat carrying officers in orange life jackets navigating high flood waters in rural Assam India, cinematic natural daylight, realistic tactical documentation style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNJRh7zT6RgwMY1HgfQ_Hb7UKK4JMXuHx9JFete8DR3EiFetTvhvwU6D87X3WOWZQcT-2-nw4UEagN2XWbxot5xjeX0W-pCrIGXSVhFH8nXXIzP1XjiHqLYLGhW89DOKhc-OUArtqNx5P1vvqG-43Ugr4Q7ueCAO7s4f0d_T2au7LY8Cv2E2fve6x9b_VDa_7lEMncDn85uBjDbL-pQfEwF-l2LYXMoakwGIUoXamlfK6KNg1VTXg9Nw"/>
+<div class="absolute top-space-xs left-space-xs bg-surface-container-lowest/90 backdrop-blur px-space-xs py-space-2xs rounded font-label-sm text-label-sm font-bold text-tertiary">
+              NDRF BATTALION 1
+            </div>
+</div>
+<div class="p-space-md">
+<h4 class="font-headline-md text-headline-md font-bold text-on-surface mb-space-2xs">Flood Inundation Evacuation</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Inflatable motorized boats dispatched to Sector 9 riverbank settlements with satellite communication transceivers.
+            </p>
+</div>
+</div>
+<!-- Image Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
+<div class="h-48 w-full relative">
+<img class="w-full h-full object-cover" data-alt="High tech emergency operations command center with wall of digital multi-panel displays showing satellite Doppler radar storm tracks and hydrological water level maps, government officials conferring" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3mQ0zvcXPk76XmDdQ6HSuiKZjfRe7DohXwdOfkUGqf7ds6lr5oZqlaviDBKV_ePiCHOTUpoHCfm9qAtL6c_9YBkRQt6jPLoeB7SLjJZ0wDnQ4DnJ7UGKJCN2JtFgiIauw-DlTv1NQYWPHAwaeb_kv4-o4ZNZoK7L9cxW_f7D8eMrqsaS03VCBIXEX5FrrMh1bKXrLMxwAgD4FmMi6aMPzrdJmXe7EthoMGUHN94_9qwzUQ5WAIDLD1Q"/>
+<div class="absolute top-space-xs left-space-xs bg-surface-container-lowest/90 backdrop-blur px-space-xs py-space-2xs rounded font-label-sm text-label-sm font-bold text-primary">
+              APEX SITUATION ROOM
+            </div>
+</div>
+<div class="p-space-md">
+<h4 class="font-headline-md text-headline-md font-bold text-on-surface mb-space-2xs">Real-Time Radar &amp; Telemetry</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Continuous Doppler weather radar streams and CWC river basin flow telemetry processed through the Kafka pipeline.
+            </p>
+</div>
+</div>
+<!-- Image Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
+<div class="h-48 w-full relative">
+<img class="w-full h-full object-cover" data-alt="Organized relief shelter interior inside a school gymnasium in India with dry food packets medical triage stations and digital sign-in tables, warm clean daylight, orderly humanitarian aid" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDITaEpGtn2_VhbupQzmaXFRX0qrpoHN4HGoTsLNgQB5fro98MlPJYAO5FyvLLjKvgJRWf3x2ql0L5AwVFS4h3GUe-rXnFn4EidmpxDgZXwwLQdMx0rmZyndHlWvgfE6zx7KDAGJlxJoC80TjohnnO273zjy1N_jSBCLvBcJBkrhxgScDPWEfQzoFafPMbOl6_wCmogmiGwcg3hADc-SKS1GY9mDsjHEKBzZ_DhAgeJjjqPwFfXm9NiYw"/>
+<div class="absolute top-space-xs left-space-xs bg-surface-container-lowest/90 backdrop-blur px-space-xs py-space-2xs rounded font-label-sm text-label-sm font-bold text-[#16A34A]">
+              CIVIL RELIEF CAMPS
+            </div>
+</div>
+<div class="p-space-md">
+<h4 class="font-headline-md text-headline-md font-bold text-on-surface mb-space-2xs">Verified Safe Shelter Network</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Over 340 geo-tagged evacuation centers with live food rations, clean water reserves, and Aadhaar-assisted family check-ins.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INTEGRATED MULTI-ROLE KEYCLOAK AUTHENTICATION GATEWAY -->
+<section class="w-full px-gutter-wide py-space-2xl" id="keycloak-gateway">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-space-xl">
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-2xs rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold uppercase mb-space-xs">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Zero Trust Infrastructure Access</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl md:text-display-lg font-bold text-on-surface tracking-tight">
+          Unified Multi-Role Auth Gateway
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto mt-space-xs">
+          Simulate instantaneous token validation across citizen, tactical responder, apex authority, and infrastructure root access tiers.
+        </p>
+</div>
+<!-- Interactive Tabbed Gateway Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden" id="authGateway">
+<!-- Tab Navigation -->
+<div class="grid grid-cols-2 md:grid-cols-4 bg-surface-container-low p-space-xs gap-space-2xs font-label-md text-label-md">
+<button class="py-space-sm px-space-xs rounded font-bold text-primary bg-surface-container-lowest shadow-sm transition-all text-center" id="tab-citizen" onclick="switchRole('citizen')">
+            Citizen Access
+          </button>
+<button class="py-space-sm px-space-xs rounded font-bold text-secondary hover:text-on-surface transition-all text-center" id="tab-field" onclick="switchRole('field')">
+            Field Squad
+          </button>
+<button class="py-space-sm px-space-xs rounded font-bold text-secondary hover:text-on-surface transition-all text-center" id="tab-apex" onclick="switchRole('apex')">
+            Apex Commander
+          </button>
+<button class="py-space-sm px-space-xs rounded font-bold text-secondary hover:text-on-surface transition-all text-center" id="tab-admin" onclick="switchRole('admin')">
+            SecOps Admin
+          </button>
+</div>
+<!-- Tab Body Content Area -->
+<div class="p-space-xl">
+<!-- Dynamic Role Content Container -->
+<div class="space-y-space-md" id="roleDetails">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm pb-space-sm">
+<div>
+<span class="px-space-xs py-space-2xs rounded bg-surface-container text-primary font-label-sm text-label-sm font-bold uppercase" id="roleBadge">
+                  CITIZEN • OTP / AADHAAR
+                </span>
+<h3 class="font-headline-lg text-headline-lg font-bold text-on-surface mt-space-2xs" id="roleTitle">
+                  Civilian Distress &amp; Shelter Registration Access
+                </h3>
+</div>
+<div class="flex items-center gap-space-xs font-data-tabular text-data-tabular text-secondary">
+<span class="material-symbols-outlined text-[18px]">vpn_key</span>
+<span id="roleAuthMethod">OTP via UIDAI / Mobile</span>
+</div>
+</div>
+<!-- Credentials Simulation Fields -->
+<div class="p-space-md bg-surface-container-low rounded-lg space-y-space-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs font-data-tabular text-data-tabular">
+<span class="text-secondary">Simulated Identifier:</span>
+<span class="font-bold text-on-surface bg-surface-container-lowest px-space-xs py-space-2xs rounded" id="mockId">
+                  +91 98765-XXXXX (Aadhaar Linked)
+                </span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs font-data-tabular text-data-tabular">
+<span class="text-secondary">Assigned Permissions:</span>
+<span class="font-bold text-primary bg-surface-container-lowest px-space-xs py-space-2xs rounded" id="mockScope">
+                  urn:rakshasetu:scope:citizen:read-write-sos
+                </span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs font-data-tabular text-data-tabular">
+<span class="text-secondary">Hardware Attestation:</span>
+<span class="font-bold text-on-surface bg-surface-container-lowest px-space-xs py-space-2xs rounded" id="mockHwid">
+                  Browser WebCrypto PWA (Dexie IndexedDB Verified)
+                </span>
+</div>
+</div>
+<!-- Action Button -->
+<div class="pt-space-xs">
+<button class="w-full py-space-md bg-primary text-on-primary font-label-lg text-label-lg font-bold rounded shadow-sm hover:bg-surface-tint transition-all flex items-center justify-center gap-space-xs" id="authSubmitBtn" onclick="simulateAuthLaunch()">
+<span class="material-symbols-outlined text-[20px]">fingerprint</span>
+<span id="authBtnText">Verify &amp; Launch Citizen Portal Session</span>
+</button>
+</div>
+<!-- Real-time Auth Telemetry Footer -->
+<div class="pt-space-md flex flex-wrap items-center justify-between gap-space-xs font-data-tabular text-data-tabular text-secondary">
+<div>Issuer: <strong class="text-on-surface">Keycloak OIDC ND-DEL-01</strong></div>
+<div>Algorithm: <strong class="text-[#16A34A]">RS256 / SHA-512</strong></div>
+<div>Token TTL: <strong class="text-on-surface">28,800s (8h)</strong></div>
+<div>Status: <span class="text-[#16A34A] font-bold">• Handshake OK</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ARCHITECTURAL COMPLIANCE & GOVERNANCE FOOTNOTE BANNER -->
+<section class="w-full px-gutter-wide py-space-lg bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-space-2xs font-label-sm text-label-sm font-bold text-secondary">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span>NDMA Guidelines v2.4 Compliant</span>
+</div>
+<span class="text-outline-variant hidden sm:inline">•</span>
+<div class="flex items-center gap-space-2xs font-label-sm text-label-sm font-bold text-secondary">
+<span class="material-symbols-outlined text-primary text-[18px]">water</span>
+<span>CWC Real-Time Hydro Stream Certified</span>
+</div>
+<span class="text-outline-variant hidden sm:inline">•</span>
+<div class="flex items-center gap-space-2xs font-label-sm text-label-sm font-bold text-secondary">
+<span class="material-symbols-outlined text-primary text-[18px]">cell_tower</span>
+<span>Open-Standard CAP v1.2 Protocol</span>
+</div>
+</div>
+<div class="font-data-tabular text-data-tabular text-secondary">
+        SecOps Node: ND-DEL-PROD-CLUSTER-01
+      </div>
+</div>
+</section>
+</div>
+<script>
+  const roles = {
+    citizen: {
+      badge: 'CITIZEN • OTP / AADHAAR',
+      title: 'Civilian Distress & Shelter Registration Access',
+      method: 'OTP via UIDAI / Mobile',
+      id: '+91 98765-XXXXX (Aadhaar Linked)',
+      scope: 'urn:rakshasetu:scope:citizen:read-write-sos',
+      hwid: 'Browser WebCrypto PWA (Dexie IndexedDB Verified)',
+      btn: 'Verify & Launch Citizen Portal Session',
+      btnBg: 'bg-primary'
+    },
+    field: {
+      badge: 'TACTICAL FORCES • SECURE HWID LINK',
+      title: 'Field Squad Dispatch & Low-Bandwidth Terminal',
+      method: 'Squad Badge + Toughbook HWID Token',
+      id: 'NDRF-BN08-TEAM-BRAVO-04',
+      scope: 'urn:rakshasetu:scope:field:triage-write:telemetry-push',
+      hwid: 'HWID: 00:1A:2B:3C:4D:5E (LoRa Modem Linked)',
+      btn: 'Verify Tactical Credentials & Open HUD',
+      btnBg: 'bg-tertiary'
+    },
+    apex: {
+      badge: 'APEX COMMAND • TIER-3 CLEARANCE',
+      title: 'State & Central Unified Incident Command Center',
+      method: 'PKI Digital Certificate / e-Gov SSO',
+      id: 'OFFICE-COMMISSIONER-REV-DISASTER-AS',
+      scope: 'urn:rakshasetu:scope:apex:broadcast-cap:air-assets-dispatch',
+      hwid: 'NIC CryptoToken ePass2003 (STQC Audited)',
+      btn: 'Verify Apex Clearance & Access Command',
+      btnBg: 'bg-primary'
+    },
+    admin: {
+      badge: 'SUPERUSER ROOT • L4 INFRASTRUCTURE',
+      title: 'Cluster Health, Cryptographic Keys & SecOps Monitor',
+      method: 'FIDO2 / YubiKey Hardware Security Key',
+      id: 'root-infra-secops@netgrid.mha.gov.in',
+      scope: 'urn:rakshasetu:scope:superadmin:all-clusters',
+      hwid: 'YubiKey 5C NFC (FIPS 140-2 Level 3)',
+      btn: 'Authenticate Root Session via FIDO2',
+      btnBg: 'bg-secondary'
+    }
+  };
+
+  function switchRole(roleKey) {
+    const data = roles[roleKey];
+    if (!data) return;
+
+    // Reset tab buttons
+    ['citizen', 'field', 'apex', 'admin'].forEach(r => {
+      const btn = document.getElementById('tab-' + r);
+      if (r === roleKey) {
+        btn.className = 'py-space-sm px-space-xs rounded font-bold text-primary bg-surface-container-lowest shadow-sm transition-all text-center';
+      } else {
+        btn.className = 'py-space-sm px-space-xs rounded font-bold text-secondary hover:text-on-surface transition-all text-center';
+      }
+    });
+
+    // Update dynamic fields
+    document.getElementById('roleBadge').textContent = data.badge;
+    document.getElementById('roleTitle').textContent = data.title;
+    document.getElementById('roleAuthMethod').textContent = data.method;
+    document.getElementById('mockId').textContent = data.id;
+    document.getElementById('mockScope').textContent = data.scope;
+    document.getElementById('mockHwid').textContent = data.hwid;
+    document.getElementById('authBtnText').textContent = data.btn;
+  }
+
+  function simulateAuthLaunch() {
+    const btn = document.getElementById('authSubmitBtn');
+    const originalText = document.getElementById('authBtnText').textContent;
+    btn.disabled = true;
+    document.getElementById('authBtnText').textContent = 'Validating Keycloak OIDC Token via RS256...';
+
+    setTimeout(() => {
+      document.getElementById('authBtnText').textContent = 'Session Authorized. Redirecting to Portal...';
+      setTimeout(() => {
+        document.getElementById('authBtnText').textContent = originalText;
+        btn.disabled = false;
+      }, 1200);
+    }, 800);
+  }
+</script></main><footer class="w-full bg-surface-container-low mt-auto"><div class="w-full px-gutter-wide py-space-2xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl mb-space-2xl"><div><div class="flex items-center gap-space-xs mb-space-sm"><span class="material-symbols-outlined text-tertiary">shield_with_heart</span><h4 class="font-headline-md text-headline-md text-on-surface font-bold">Emergency Hotlines</h4></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Immediate emergency dispatch and rescue coordination active round the clock.</p><ul class="space-y-space-xs font-label-md text-label-md"><li class="flex items-center justify-between p-space-xs bg-surface-container rounded"><span class="text-secondary">National Unified SOS</span><a class="font-bold text-tertiary font-data-tabular text-data-tabular" href="tel:112">112</a></li><li class="flex items-center justify-between p-space-xs bg-surface-container rounded"><span class="text-secondary">NDRF HQ Control Room</span><a class="font-bold text-primary font-data-tabular text-data-tabular" href="tel:1070">1070 / 011-24363260</a></li><li class="flex items-center justify-between p-space-xs bg-surface-container rounded"><span class="text-secondary">State Disaster Line (SDRF)</span><a class="font-bold text-primary font-data-tabular text-data-tabular" href="tel:1078">1078</a></li><li class="flex items-center justify-between p-space-xs bg-surface-container rounded"><span class="text-secondary">Ambulance &amp; Trauma Triage</span><a class="font-bold text-on-surface font-data-tabular text-data-tabular" href="tel:108">108 / 102</a></li></ul></div><div><div class="flex items-center gap-space-xs mb-space-sm"><span class="material-symbols-outlined text-primary">water</span><h4 class="font-headline-md text-headline-md text-on-surface font-bold">Hydrological Links</h4></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Live water telemetry, basin run-off gauges, and flood discharge models.</p><ul class="space-y-space-sm font-label-md text-label-md"><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-[16px] text-secondary">open_in_new</span><a href="#">CWC Flood Inundation &amp; Warning Cell</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-[16px] text-secondary">open_in_new</span><a href="#">IMD Doppler Weather Radar Network</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-[16px] text-secondary">open_in_new</span><a href="#">Brahmaputra &amp; Ganga Basin Flow Telemetry</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-[16px] text-secondary">open_in_new</span><a href="#">National Remote Sensing Centre (ISRO Flood Maps)</a></li></ul></div><div><div class="flex items-center gap-space-xs mb-space-sm"><span class="material-symbols-outlined text-secondary">policy</span><h4 class="font-headline-md text-headline-md text-on-surface font-bold">Governance &amp; Protocol</h4></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Statutory directives under National Disaster Management Act 2005.</p><ul class="space-y-space-sm font-label-md text-label-md"><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[16px] text-secondary">description</span><a href="#">SOP for Cyclone &amp; Inundation Response</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[16px] text-secondary">description</span><a href="#">NDMA Incident Command Guidelines (ICS)</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[16px] text-secondary">description</span><a href="#">Public Alert CAP Server Status &amp; Feeds</a></li><li class="flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span><a href="#">Authorized Agency Credentials (CERT-In)</a></li></ul></div><div><div class="flex items-center gap-space-xs mb-space-sm"><span class="material-symbols-outlined text-primary-container">hub</span><h4 class="font-headline-md text-headline-md text-on-surface font-bold">Node Status &amp; Sync</h4></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Redundant failover architecture across New Delhi, Hyderabad, Guwahati, and Pune data hubs.</p><div class="bg-surface-container rounded p-space-md space-y-space-xs"><div class="flex items-center justify-between font-label-sm text-label-sm"><span class="text-secondary">DC-North (Delhi HQ)</span><span class="font-data-tabular text-data-tabular text-[#16A34A] font-bold">ONLINE • 1ms</span></div><div class="flex items-center justify-between font-label-sm text-label-sm"><span class="text-secondary">DC-East (Guwahati Sat)</span><span class="font-data-tabular text-data-tabular text-[#16A34A] font-bold">ONLINE • 8ms</span></div><div class="flex items-center justify-between font-label-sm text-label-sm"><span class="text-secondary">DC-South (Hyderabad CWC)</span><span class="font-data-tabular text-data-tabular text-[#16A34A] font-bold">ONLINE • 4ms</span></div><div class="flex items-center justify-between font-label-sm text-label-sm"><span class="text-secondary">DC-West (Pune IMD Grid)</span><span class="font-data-tabular text-data-tabular text-[#16A34A] font-bold">ONLINE • 5ms</span></div></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-label-sm text-label-sm text-secondary"><div class="flex items-center gap-space-sm flex-wrap"><span>© 2025 RakshaSetu National Emergency Portal. Ministry of Home Affairs, Govt. of India.</span><span class="hidden md:inline">•</span><span>Security Audit: STQC / CERT-In Certified Tier-IV Compliant</span></div><div class="flex items-center gap-space-lg"><a class="hover:text-on-surface" href="#">Terms of Response Service</a><a class="hover:text-on-surface" href="#">Data Privacy Directive</a><a class="hover:text-on-surface" href="#">Accessibility Compliance</a><a class="hover:text-on-surface" href="#">API Endpoints (CAPv1.2)</a></div></div></div></footer></body></html>
